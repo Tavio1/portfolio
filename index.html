@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- **************************************************************************************** -->
+    <!-- *                                                                                      * -->
+    <!-- * Do not change anything within the <head></head> section of the HTML                  * -->
+    <!-- *                                                                                      * -->
+    <!-- **************************************************************************************** -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<style> .btn{border:1px solid black; padding:5px;display:inline-block} </style>
+</head>
+<body>
+    <!-- **************************************************************************************** -->
+    <!-- *                                                                                      * -->
+    <!-- * Nothing to change here in the <body>                                                 * -->
+    <!-- *                                                                                      * -->
+    <!-- **************************************************************************************** -->
+	<div class="container">
+		<h1>June Temperatures</h1>
+
+		<p><input type="button" class="btn btn-primary" id="btn_1" value="Average Temperature"></p>
+		
+		<div id="textDisplayed1"></div> 
+
+		<p><input type="button" class="btn btn-primary" id="btn_2" value="Max Temperature"></p>
+		
+		<div id="textDisplayed2"></div> 
+
+		<p><input type="button" class="btn btn-primary" id="btn_3" value="Min Temperature"></p>
+		
+		<div id="textDisplayed3"></div> 
+		
+		<p><input type="button" class="btn btn-primary" id="btn_4" value="Show The Temperatures"></p>
+		
+		<ul id="listOutput"></ul> 	
+	</div>
+</body>
+<script>
+//
+// Here is an array of noon-day temperatures in the month of June
+//
+
+//how would you describe the scope of this variable?
+const junetemps = [77,80,81,83,85,82,80,84,88,90,91,89,87,86,87,84,82,81,80,79,77,80,81,83,85,82,80,84,88,89];
+
+
+
+function getAvgTemp() {
+	let sumTemp = 0;  //how would you describe the scope of sumTemp
+	for(let i=0; i < junetemps.length;i++){
+		sumTemp = sumTemp + junetemps[i];
+	}
+	let avgTemp = sumTemp / junetemps.length;
+	avgTemp = avgTemp.toFixed(2);
+	return avgTemp;
+}
+
+function getMaxTemp() {
+	let answer = junetemps[0];
+	for(let i=0; i < junetemps.length;i++){
+		//how would you describe the scope of i
+		if (junetemps[i] > answer){
+			answer = junetemps[i];
+		}
+	}
+	return answer;
+}
+
+//3-look at the function above and adapt it to calculate the min temp 
+function getMinTemp() {
+	let answer = junetemps[0];
+    for(let i=0; i < junetemps.length; i++) {
+        if (junetemps[i] < answer) {
+            answer = junetemps[i];
+        }
+    }
+
+	return answer;
+}
+
+//4-complete this function so that an unordered list of temperatures is printed upon clicking #btn_4
+function displayTemps() {
+// It's useful to be able to loop through an array and generate an HTML list   
+// or an HTML table.
+    var output = "";
+    for(let i=0; i < junetemps.length; i++) {
+        output += "<li>" + junetemps[i] + "</li>";
+    }
+    
+	return output;
+}
+
+
+$('#btn_1').click(function(){
+	$('#textDisplayed1').html(getAvgTemp());
+});
+
+//1-complete this click event
+$('#btn_2').click(function(){
+	$('#textDisplayed2').html(getMaxTemp());
+})
+
+//2-complete this click event
+$('#btn_3').click(function(){
+	$('#textDisplayed3').html(getMinTemp());
+})
+
+//5-complete this click event
+$('#btn_4').click(function(){
+	$('#listOutput').html(displayTemps());
+});
+
+
+</script>
+</html>
