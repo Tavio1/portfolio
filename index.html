@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Your Name | Game Designer & Programmer</title>
+<title>Ottavio Ficaccio | Programmer & Game Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -93,6 +93,7 @@
     background-position: center;
     transform: scale(1.03);
     animation: heroZoom 12s ease-out forwards;
+    transition: background-image 0.8s ease-in-out;
   }
 
   @keyframes heroZoom {
@@ -596,7 +597,7 @@
        background-size: cover;
        background-position: center;
   -->
-  <div class="hero-bg"></div>
+  <div class="hero-bg" id="heroBg"></div>
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
@@ -834,6 +835,34 @@
     document.getElementById('form-msg').style.display = 'block';
     e.target.reset();
   }
+</script>
+
+<script>
+  const heroBgs = [
+    'assets/gifs/Chaos_High_Quality.gif',
+    'assets/gifs/Gameplay_High_Quality.gif',
+    'assets/gifs/Menu_High_Quality.gif',
+    'assets/gifs/Hit_High_Quality.gif',
+    /* add as many as you want */
+  ];
+
+  const heroBg = document.getElementById('heroBg');
+  let heroCurrent = 0;
+
+  function cycleHeroBg() {
+    heroCurrent = (heroCurrent + 1) % heroBgs.length;
+    heroBg.style.backgroundImage = `url('${heroBgs[heroCurrent]}')`;
+    heroBg.style.backgroundSize = 'cover';
+    heroBg.style.backgroundPosition = 'center';
+  }
+
+  // Set the first one immediately on load
+  heroBg.style.backgroundImage = `url('${heroBgs[0]}')`;
+  heroBg.style.backgroundSize = 'cover';
+  heroBg.style.backgroundPosition = 'center';
+
+  // Switch every 5 seconds — change 5000 to however many milliseconds you want
+  setInterval(cycleHeroBg, 5000);
 </script>
 
 </body>
