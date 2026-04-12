@@ -631,7 +631,9 @@
        background-size: cover;
        background-position: center;
   -->
-  <div class="hero-bg" id="heroBg"></div>
+  <!-- <div class="hero-bg" id="heroBg"></div> -->
+  <div id="heroBg"  class="hero-bg" style="position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 0.4s ease;"></div>
+  <div id="heroBg2" class="hero-bg" style="position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 0.4s ease;opacity:0;"></div>
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
@@ -799,8 +801,7 @@
       system architecture, mechanic design, and real-time programming
       across multiple languages.
       <br><br>
-      I've 
-      Whether prototyping a new mechanic or shipping a polished build, 
+      Whether I'm prototyping a new mechanic or shipping a polished build, 
       I love bringing all my passions together to build 
       <strong>unique experiences that make people smile</strong>.
     </p>
@@ -910,23 +911,35 @@
     /* add as many as you want */
   ];
 
-  const heroBg = document.getElementById('heroBg');
-  let heroCurrent = 0;
+  const layer1 = document.getElementById('heroBg');
+  const layer2 = document.getElementById('heroBg2');
+  let current = 0;
+  let onTop = 1; // tracks which layer is currently visible on top
+
+  // Set the first image on layer1 immediately
+  layer1.style.backgroundImage = `url('${heroBgs[0]}?t=${Date.now()}')`;
 
   function cycleHeroBg() {
-    heroCurrent = (heroCurrent + 1) % heroBgs.length;
-    heroBg.style.backgroundImage = `url('${heroBgs[heroCurrent]}')`;
-    heroBg.style.backgroundSize = 'cover';
-    heroBg.style.backgroundPosition = 'center';
+    current = (current + 1) % heroBgs.length;
+    const freshUrl = `url('${heroBgs[current]}?t=${Date.now()}')`;
+
+    if (onTop === 1) {
+      // layer1 is visible — load next into layer2 then fade it in
+      layer2.style.backgroundImage = freshUrl;
+      layer2.style.opacity = '1';
+      layer1.style.opacity = '0';
+      onTop = 2;
+    } else {
+      // layer2 is visible — load next into layer1 then fade it in
+      layer1.style.backgroundImage = freshUrl;
+      layer1.style.opacity = '1';
+      layer2.style.opacity = '0';
+      onTop = 1;
+    }
   }
 
-  // Set the first one immediately on load
-  heroBg.style.backgroundImage = `url('${heroBgs[0]}')`;
-  heroBg.style.backgroundSize = 'cover';
-  heroBg.style.backgroundPosition = 'center';
-
   // Switch every 5 seconds — change 5000 to however many milliseconds you want
-  setInterval(cycleHeroBg, 5000);
+  setInterval(cycleHeroBg, 3000);
 </script>
 
 <script>
