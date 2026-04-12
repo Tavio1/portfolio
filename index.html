@@ -379,6 +379,7 @@
     aspect-ratio: 3/4;
     overflow: hidden;
     max-height: 580px;
+    margin-left: auto;
   }
 
   .about-img-wrap img {
@@ -517,22 +518,25 @@
   }
 
   /* ── FOOTER ── */
-  footer {
-    background: #060606;
-    border-top: 1px solid var(--border);
-    padding: 2rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    footer {
+        background: #060606;
+        border-top: 1px solid var(--border);
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-  .footer-copy {
-    font-size: 0.75rem;
-    color: rgba(176,170,158,0.5);
-    letter-spacing: 0.05em;
-  }
+    .footer-copy {
+        font-size: 0.75rem;
+        color: rgba(176,170,158,0.5);
+        letter-spacing: 0.05em;
+        width: 100%;
+    }
+
+    .footer-copy-div {
+        width: 50%;
+    }
 
   .footer-nav {
     display: flex;
@@ -550,6 +554,34 @@
   }
 
   .footer-nav a:hover { color: var(--off-white); }
+
+  .footer-socials {
+    display: flex;
+    gap: 1.2rem;
+    width: 50%;
+    justify-content: right;
+  }
+
+  .footer-socials a {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(240,236,228,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .footer-socials a:hover {
+    border-color: var(--accent);
+    color: var(--off-white);
+    background: rgba(212,82,42,0.15);
+  }
+
+  .footer-socials svg { width: 16px; height: 16px; fill: currentColor; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -761,15 +793,16 @@
     <h2>About<br>Ottavio</h2>
     <div class="about-accent-line"></div>
     <p class="about-text">
-      I'm a <strong>Game Designer &amp; Programmer</strong> with experience building
+      I'm a <strong>Programmer &amp; Game Designer</strong> with experience building
       <!-- Edit this paragraph with your own background -->
       engaging gameplay systems from the ground up. My work spans
-      level design, systems architecture, and real-time programming
-      across multiple engines.
+      system architecture, mechanic design, and real-time programming
+      across multiple languages.
       <br><br>
-      Whether prototyping a new mechanic or shipping a polished build,
-      I focus on creating experiences that feel <strong>intentional, responsive,
-      and memorable</strong>.
+      I've 
+      Whether prototyping a new mechanic or shipping a polished build, 
+      I love bringing all my passions together to build 
+      <strong>unique experiences that make people smile</strong>.
     </p>
     <!-- Update href to link to your actual CV/resume file -->
     <a href="resume.pdf" class="btn" target="_blank">
@@ -784,10 +817,6 @@
   <div>
     <p class="section-label">Get in Touch</p>
     <h2>Contact<br>Me</h2>
-    <div class="contact-img">
-      <!-- Replace with: <img src="your-contact-image.jpg" alt="" /> -->
-      <div class="contact-img-placeholder">ADD IMAGE</div>
-    </div>
   </div>
 
   <div class="contact-form">
@@ -808,7 +837,7 @@
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me about your project…" required></textarea>
+        <textarea id="message" name="message" placeholder="Send me a message..." required></textarea>
       </div>
       <div class="form-submit">
         <button type="submit" class="btn" style="background:none;cursor:pointer;font-family:var(--font-body);">
@@ -825,22 +854,50 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p>
-  <ul class="footer-nav">
-    <li><a href="#">Home</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
+  <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <!-- Itch.io -->
+        <a href="https://typh0n4.itch.io/" aria-label="itch.io">
+            <svg viewBox="0 0 248 248" xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="width:16px;height:16px;">
+                <path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"></path>
+            </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:tavfic@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="width:16px;height:16px;">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+        </a>
+    </div>
 </footer>
 
 <script>
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    // In production, replace this with a real form submission
-    // e.g. Formspree: action="https://formspree.io/f/YOUR_ID"
-    document.getElementById('form-msg').style.display = 'block';
-    e.target.reset();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch('https://formspree.io/f/mlgoqkyj', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    const msg = document.getElementById('form-msg');
+    if (response.ok) {
+      msg.textContent = 'Message received — I\'ll be in touch soon!';
+      msg.style.color = 'var(--accent-light)';
+      msg.style.display = 'block';
+      form.reset();
+    } else {
+      msg.textContent = 'Something went wrong — please try emailing me directly at tavfic@gmail.com';
+      msg.style.color = '#e87070';
+      msg.style.display = 'block';
+    }
   }
 </script>
 
