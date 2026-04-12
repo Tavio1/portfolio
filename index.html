@@ -23,7 +23,10 @@
     --font-body: 'DM Sans', sans-serif;
   }
 
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth; 
+    overscroll-behavior: none;
+  }
 
   body {
     background: var(--black);
@@ -216,7 +219,10 @@
   }
 
   /* ── PORTFOLIO GRID ── */
-  #portfolio { background: var(--black); }
+  #portfolio { 
+    background: var(--black); 
+    padding: 7rem 3rem 4rem;
+  }
 
   .portfolio-header {
     display: flex;
@@ -229,19 +235,29 @@
 
   .portfolio-header h2 { margin-bottom: 0; }
 
+  
+  .portfolio-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .portfolio-footer h2 { margin-bottom: 0; }
+
   .view-all {
     font-size: 0.78rem;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--warm-gray);
+    color: var(--off-white);
     text-decoration: none;
     border-bottom: 1px solid rgba(176,170,158,0.3);
     padding-bottom: 2px;
     transition: color 0.2s, border-color 0.2s;
   }
-
-  .view-all:hover { color: var(--off-white); border-color: var(--off-white); }
 
   .project-grid {
     display: grid;
@@ -631,7 +647,6 @@
        background-size: cover;
        background-position: center;
   -->
-  <!-- <div class="hero-bg" id="heroBg"></div> -->
   <div id="heroBg"  class="hero-bg" style="position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 0.4s ease;"></div>
   <div id="heroBg2" class="hero-bg" style="position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity 0.4s ease;opacity:0;"></div>
   <div class="hero-overlay"></div>
@@ -677,7 +692,6 @@
       <p class="section-label">Selected Work</p>
       <h2>Portfolio</h2>
     </div>
-    <a href="#" class="view-all">View all projects →</a>
   </div>
 
   <div class="project-grid">
@@ -687,14 +701,15 @@
     <a href="pas-de-deux.html" class="project-card featured">
       <div class="card-img">
         <!-- Replace with: <img src="your-project-1-image.jpg" alt="Project 1 Screenshot" /> -->
-        <div class="card-img-placeholder p1">ADD IMAGE</div>
+        <img src="assets/images/Pas de Deux.png" alt="Pas de Deux Cover Art" />
+        <!-- <div class="card-img-placeholder p1">ADD IMAGE</div> -->
       </div>
       <div class="card-meta">
         <div>
           <div class="card-title">Pas de Deux</div>
           <div class="card-tags">
-            <span class="tag">Unreal Engine 5</span>
-            <span class="tag">C++</span>
+            <span class="tag">Unity 6</span>
+            <span class="tag">Game Design</span>
             <span class="tag">Systems Design</span>
           </div>
         </div>
@@ -707,15 +722,17 @@
     <!-- PROJECT 2 — Medium (right) -->
     <a href="project-template.html" class="project-card medium">
       <div class="card-img">
-        <div class="card-img-placeholder p2">ADD IMAGE</div>
+        <img src="assets/images/Perfect Storm.png" alt="Perfect Storm Cover Art" />
+        <!-- <div class="card-img-placeholder p2">ADD IMAGE</div> -->
       </div>
       <div class="card-meta">
         <div>
-          <div class="card-title">Project Title Two</div>
+          <div class="card-title">Perfect Storm</div>
           <div class="card-tags">
             <span class="tag">Unity</span>
             <span class="tag">C#</span>
             <span class="tag">Gameplay Programming</span>
+            <span class="tag">Systems Programming</span>
           </div>
         </div>
         <div class="card-arrow">
@@ -727,14 +744,16 @@
     <!-- PROJECT 3, 4, 5 — Small bottom row -->
     <a href="project-template.html" class="project-card small">
       <div class="card-img">
-        <div class="card-img-placeholder p3">ADD IMAGE</div>
+        <!-- <div class="card-img-placeholder p3">ADD IMAGE</div> -->
+        <img src="assets/images/Anvil.png" alt="Anvil Cover Art" />
       </div>
       <div class="card-meta">
         <div>
-          <div class="card-title">Project Three</div>
+          <div class="card-title">Ubisoft Anvil Engine</div>
           <div class="card-tags">
-            <span class="tag">Game Jam</span>
-            <span class="tag">Godot</span>
+            <span class="tag">Tools Development</span>
+            <span class="tag">Project Management</span>
+            <span class="tag">UI/UX Design</span>
           </div>
         </div>
         <div class="card-arrow">
@@ -745,14 +764,16 @@
 
     <a href="project-template.html" class="project-card small">
       <div class="card-img">
-        <div class="card-img-placeholder p4">ADD IMAGE</div>
+        <!-- <div class="card-img-placeholder p4">ADD IMAGE</div> -->
+        <img src="assets/images/Shelly Snack Search.png" alt="Shelly Snack Search Cover Art" />
       </div>
       <div class="card-meta">
         <div>
-          <div class="card-title">Project Four</div>
+          <div class="card-title">Shelly's Snack Search</div>
           <div class="card-tags">
-            <span class="tag">Prototype</span>
-            <span class="tag">Python</span>
+            <span class="tag">Game Jam</span>
+            <span class="tag">Unity</span>
+            <span class="tag">Level Design</span>
           </div>
         </div>
         <div class="card-arrow">
@@ -767,10 +788,11 @@
       </div>
       <div class="card-meta">
         <div>
-          <div class="card-title">Project Five</div>
+          <div class="card-title">Rigidbody Physics Simulation</div>
           <div class="card-tags">
-            <span class="tag">Level Design</span>
-            <span class="tag">UE5</span>
+            <span class="tag">Unity 6</span>
+            <span class="tag">Physics Programming</span>
+            <span class="tag">Tech Demo</span>
           </div>
         </div>
         <div class="card-arrow">
@@ -779,6 +801,9 @@
       </div>
     </a>
 
+  </div>
+  <div class="portfolio-footer">
+    <a href="#" class="view-all btn">View all projects →</a>
   </div>
 </section>
 
