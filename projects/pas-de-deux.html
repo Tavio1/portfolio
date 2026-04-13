@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Project Title — Your Name</title>
+<title>Ottavio Ficaccio | Pas de Deux</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -23,7 +23,10 @@
     --font-body: 'DM Sans', sans-serif;
   }
 
-  html { scroll-behavior: smooth; }
+  html { 
+    scroll-behavior: smooth; 
+    overscroll-behavior: none;
+  }
 
   body {
     background: var(--black);
@@ -63,16 +66,16 @@
   }
 
   .nav-links a {
-    font-size: 0.78rem;
+    font-size: 1.0rem;
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--warm-gray);
+    color: var(--off-white);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .nav-links a:hover { color: var(--off-white); }
+  .nav-links a:hover { color: var(--accent-light); }
 
   /* ── HERO BANNER ── */
   .project-hero {
@@ -89,11 +92,10 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    /* Replace with your project's key art:
-       background-image: url('project-hero.jpg');
-       background-size: cover;
-       background-position: center; */
-    background: linear-gradient(145deg, #1c1c2e 0%, #2d1b4e 50%, #1a1228 100%);
+    /* TODO: Replace with your project's key art: */
+    background-image: url('../assets/pas-de-deux/splash-notext.png');
+    background-size: cover;
+    background-position: center; 
     transform: scale(1.03);
     animation: heroZoom 10s ease-out forwards;
   }
@@ -106,13 +108,13 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.15) 60%);
+    background: linear-gradient(to top, rgba(10,10,10,1) 0%, rgba(10,10,10,0.15) 60%);
   }
 
   .project-hero-content {
     position: relative;
     z-index: 2;
-    padding: 0 3rem 3.5rem;
+    padding: 0 3rem 2.5rem;
     width: 100%;
     animation: fadeUp 0.8s 0.2s both;
   }
@@ -132,7 +134,7 @@
     text-transform: uppercase;
     color: var(--warm-gray);
     text-decoration: none;
-    margin-bottom: 1.2rem;
+    margin-top: 1rem;
     transition: color 0.2s;
   }
 
@@ -329,6 +331,11 @@
 
   .overview-text p + p { margin-top: 1rem; }
 
+  .overview-text strong {
+    font-weight: 500;
+    color: var(--off-white);
+  }
+
   /* Task list */
   .task-list {
     list-style: none;
@@ -419,9 +426,6 @@
     font-size: 1.6rem;
     letter-spacing: 0.04em;
     color: var(--off-white);
-    margin-bottom: 1.8rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid var(--border);
   }
 
   .meta-row {
@@ -590,6 +594,35 @@
 
   .footer-nav a:hover { color: var(--off-white); }
 
+
+  .footer-socials {
+    display: flex;
+    gap: 1.2rem;
+    width: 50%;
+    justify-content: right;
+  }
+
+  .footer-socials a {
+    width: 38px; height: 38px;
+    border: 1px solid rgba(240,236,228,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+    color: var(--warm-gray);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .footer-socials a:hover {
+    border-color: var(--accent);
+    color: var(--off-white);
+    background: rgba(212,82,42,0.15);
+  }
+
+  .footer-socials svg { width: 16px; height: 16px; fill: currentColor; }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     .project-body {
@@ -622,12 +655,12 @@
 <!-- ── NAV ── -->
 <nav>
   <!-- Update href to point to your homepage file -->
-  <a href="index.html" class="nav-logo">YOUR NAME</a>
+  <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
   <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#portfolio">Portfolio</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#portfolio">Portfolio</a></li>
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -639,14 +672,12 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="project-hero-content">
-    <a href="index.html#portfolio" class="back-link">
-      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      All Projects
+    <h1 class="project-title">Pas de deux</h1>
+    <span class="project-eyebrow">PC · Unity 6 · 2025</span>
+    <a href="../index.html#portfolio" class="back-link">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        All Projects
     </a>
-    <!-- Replace with your project's platform/type label -->
-    <span class="project-eyebrow">PC · Unreal Engine 5 · 2024</span>
-    <!-- Replace with your project title -->
-    <h1 class="project-title">Project<br>Title Here</h1>
   </div>
 </header>
 
@@ -668,11 +699,10 @@
           etc.
           Only the active slide is shown; the rest are hidden by JS.
         -->
-        <div class="slide-placeholder" data-slide="1">SCREENSHOT 1 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="2">SCREENSHOT 2 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="3">SCREENSHOT 3 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="4">SCREENSHOT 4 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="5">SCREENSHOT 5 — ADD IMAGE</div>
+        <img src="../assets/pas-de-deux/Gameplay_High_Quality.gif" alt="Gameplay GIF 1" />
+        <img src="../assets/pas-de-deux/Menu_High_Quality.gif" alt="Main Menu GIF" />
+        <img src="../assets/pas-de-deux/Hit_High_Quality.gif" alt="Gameplay GIF 2" />
+        <img src="../assets/pas-de-deux/Chaos_High_Quality.gif" alt="Gameplay GIF 3" />
       </div>
 
       <div class="slide-controls">
@@ -692,20 +722,26 @@
     <!-- OVERVIEW -->
     <div class="content-section">
       <p class="section-label">Overview</p>
-      <h2 class="section-heading">About the Project</h2>
+      <!-- TODO: Replace "the Project" with project name -->
+      <h2 class="section-heading">About Pas de Deux</h2>
       <div class="overview-text">
         <!--
-          Replace this text with your own project overview.
+          TODO: Replace this text with your own project overview.
           Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
         -->
         <p>
-          Describe what your project is about here. What was the concept? What were you
-          trying to achieve or learn? What makes this project interesting or unique?
+          Pas de Deux is a silly cooperative rhythm game with a less-than-graceful 
+          ballerina, quite an unruly audience, and a set that could go up in flames at 
+          any minute! Two players must work together, each controlling one half of
+          the ballerina whilst trying to keep the audience entertained.
         </p>
-        <p>
-          You can also talk about the context — was this a game jam, a solo passion project,
-          a university assignment, or a professional production? Add any relevant background
-          that helps the reader understand the scope and constraints.
+        <p> 
+          This game was made over the course of 10 weeks as the McGill University 
+          submission for the 2025 edition of the Ubisoft Game Lab Competition. 
+          Our team consisted of myself as the designer, three artists, and four 
+          programmers and we had to create a game under the design and theme constraints
+          of the competition. Out of 26 competing games, we <strong>won the Jury's 
+          Choice Award</strong> for creating the most fun and enjoyable game.
         </p>
       </div>
     </div>
@@ -713,36 +749,83 @@
     <!-- TASKS / RESPONSIBILITIES -->
     <div class="content-section">
       <p class="section-label">Responsibilities</p>
-      <h2 class="section-heading">What I Did</h2>
+      <h2 class="section-heading">Designer Tasks</h2>
       <ul class="task-list" id="taskList">
         <!--
-          Replace each <li> with your actual tasks.
+          TODO: Replace each <li> with your actual tasks.
           Keep them specific and action-oriented.
           Add or remove items as needed.
         -->
         <li>
           <span class="task-num">01</span>
-          <span>Describe a specific task or responsibility here — e.g. "Designed and implemented the player controller with support for keyboard, mouse, and gamepad input."</span>
+          <span>Designed the core game loop, the controls, and the split co-op mechanics</span>
         </li>
         <li>
           <span class="task-num">02</span>
-          <span>Another task — e.g. "Built an AI behaviour system using behaviour trees, blackboards, and custom perception queries."</span>
+          <span>Worked with artists to define the artistic direction of the game and UI</span>
         </li>
         <li>
           <span class="task-num">03</span>
-          <span>Another task — e.g. "Designed the core game loop and win/loss conditions, including a capture-point conquest mode."</span>
+          <span>Ran public playtests and utilized feedback to iterate on UX and balance</span>
         </li>
         <li>
           <span class="task-num">04</span>
-          <span>Another task — e.g. "Created and iterated on a large open level using landscape sculpting, foliage placement, and modular assets."</span>
+          <span>Developed significant amounts of documentation in the form of formal design documents, spreadsheets, and vision boards</span>
         </li>
         <li>
           <span class="task-num">05</span>
-          <span>Another task — e.g. "Implemented UI systems for player HUD, minimap, and objective tracking."</span>
+          <span>Created unique theming, visuals, lighting, and level designs for 5 different playable songs</span>
         </li>
         <li>
           <span class="task-num">06</span>
-          <span>Add or remove list items as needed for your specific project.</span>
+          <span>Designed the rhythm and input management systems and collaborated with programmers to implement it</span>
+        </li>
+        <li>
+          <span class="task-num">07</span>
+          <span>Drew wireframes of HUD in Procreate and made UI mockups in Figma and iterated on designs extensively to ensure good flow and feel for players</span>
+        </li>
+
+      </ul>
+      
+      <h2 class="section-heading" style="margin-top:1rem">Programmer Tasks</h2>
+      <ul class="task-list" id="taskList">
+        <!--
+          TODO: Replace each <li> with your actual tasks.
+          Keep them specific and action-oriented.
+          Add or remove items as needed.
+        -->
+        <li>
+          <span class="task-num">01</span>
+          <span>Created technical diagrams outlining the software architecture for the gameplay mechanics and how the input, object, and point system must work together</span>
+        </li>
+        <li>
+          <span class="task-num">02</span>
+          <span>Merged all individual systems developed by programmers together, adjusting code and fixing merge conflicts</span>
+        </li>
+        <li>
+          <span class="task-num">03</span>
+          <span>Delved into code to fix bugs and refine implementations of mechanics, tools, and UI</span>
+        </li>
+      </ul>
+      
+      <h2 class="section-heading" style="margin-top:1rem">Management Tasks</h2>
+      <ul class="task-list" id="taskList">
+        <!--
+          TODO: Replace each <li> with your actual tasks.
+          Keep them specific and action-oriented.
+          Add or remove items as needed.
+        -->
+        <li>
+          <span class="task-num">01</span>
+          <span>Created a production schedule using Agile methodologies and ensured deadlines were met, while continually adjusting the schedule and development plan when delays occurred</span>
+        </li>
+        <li>
+          <span class="task-num">02</span>
+          <span>Ran weekly scrum-style team meetings to plan sprints, organize tasks, and solve any issues</span>
+        </li>
+        <li>
+          <span class="task-num">03</span>
+          <span>Gained experience with the entire cycle of game development, from pre-production all the way to gold master</span>
         </li>
       </ul>
     </div>
@@ -753,7 +836,7 @@
       <h2 class="section-heading">Video</h2>
       <div class="video-wrap">
         <!--
-          TO EMBED A YOUTUBE VIDEO:
+          TODO: TO EMBED A YOUTUBE VIDEO:
           Replace the placeholder div below with:
           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
                   title="Gameplay video"
@@ -766,10 +849,11 @@
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen></iframe>
         -->
-        <div class="video-placeholder">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          <p>Add your gameplay video URL above</p>
-        </div>
+        <iframe src="https://www.youtube.com/embed/AfeR549AGZc"
+                  title="Gameplay video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+        </iframe>
       </div>
     </div>
 
@@ -780,15 +864,15 @@
     <div class="meta-card">
       <div class="meta-title">Project Info</div>
 
-      <!-- Edit each meta-val with your project's details -->
+      <!-- TODO: Edit each meta-val with your project's details -->
       <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
       </div>
 
       <div class="meta-row">
-        <span class="meta-key">Engine / Software</span>
-        <span class="meta-val">Unreal Engine 5</span>
+        <span class="meta-key">Software</span>
+        <span class="meta-val">Unity Engine 6, C#, Miro</span>
       </div>
 
       <div class="meta-row">
@@ -798,40 +882,41 @@
 
       <div class="meta-row">
         <span class="meta-key">Team Size</span>
-        <span class="meta-val">Solo</span>
+        <span class="meta-val">8</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">My Role</span>
-        <span class="meta-val">Game Designer &amp; Programmer</span>
+        <span class="meta-val">Team Lead, Game Designer &amp; Programmer</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Status</span>
-        <span class="meta-val">Prototype / Shipped / In Development</span>
+        <span class="meta-val">Shipped</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
           <!-- Add or remove tags to match your project -->
-          <span class="tag">Blueprints</span>
-          <span class="tag">C++</span>
-          <span class="tag">AI Design</span>
-          <span class="tag">Level Design</span>
-          <span class="tag">UI</span>
+          <span class="tag">C#</span>
+          <span class="tag">Gameplay Design</span>
+          <span class="tag">Agile</span>
+          <span class="tag">Systems Design</span>
+          <span class="tag">Balance</span>
+
         </div>
       </div>
 
       <!-- Optional links — remove any you don't need -->
       <div class="meta-links">
-        <a href="#" class="btn primary">
-          Play / Download
+        <a href="https://typh0n4.itch.io/pas-de-deux-the-chaos-ballet" class="btn primary">
+          Download
           <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
-        <a href="#" class="btn">
-          View on GitHub
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://drive.google.com/drive/folders/1mmcNEUshgg3Ct4t-CtTsMKCkwl1pxt2J?usp=drive_link" class="btn">
+          See Documentation
+          <svg viewBox="0 0 24 24"><path d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3"/></svg>
         </a>
       </div>
     </div>
@@ -855,13 +940,25 @@
 
 <!-- ── FOOTER ── -->
 <footer>
-  <p class="footer-copy">© 2025 Your Name. All rights reserved.</p>
-  <ul class="footer-nav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#portfolio">Portfolio</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+    <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
+  <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <!-- Itch.io -->
+        <a href="https://typh0n4.itch.io/" aria-label="itch.io">
+            <svg viewBox="0 0 248 248" xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="width:16px;height:16px;">
+                <path d="M31.99 1.365C21.287 7.72.2 31.945 0 38.298v10.516C0 62.144 12.46 73.86 23.773 73.86c13.584 0 24.902-11.258 24.903-24.62 0 13.362 10.93 24.62 24.515 24.62 13.586 0 24.165-11.258 24.165-24.62 0 13.362 11.622 24.62 25.207 24.62h.246c13.586 0 25.208-11.258 25.208-24.62 0 13.362 10.58 24.62 24.164 24.62 13.585 0 24.515-11.258 24.515-24.62 0 13.362 11.32 24.62 24.903 24.62 11.313 0 23.773-11.714 23.773-25.046V38.298c-.2-6.354-21.287-30.58-31.988-36.933C180.118.197 157.056-.005 122.685 0c-34.37.003-81.228.54-90.697 1.365zm65.194 66.217a28.025 28.025 0 0 1-4.78 6.155c-5.128 5.014-12.157 8.122-19.906 8.122a28.482 28.482 0 0 1-19.948-8.126c-1.858-1.82-3.27-3.766-4.563-6.032l-.006.004c-1.292 2.27-3.092 4.215-4.954 6.037a28.5 28.5 0 0 1-19.948 8.12c-.934 0-1.906-.258-2.692-.528-1.092 11.372-1.553 22.24-1.716 30.164l-.002.045c-.02 4.024-.04 7.333-.06 11.93.21 23.86-2.363 77.334 10.52 90.473 19.964 4.655 56.7 6.775 93.555 6.788h.006c36.854-.013 73.59-2.133 93.554-6.788 12.883-13.14 10.31-66.614 10.52-90.474-.022-4.596-.04-7.905-.06-11.93l-.003-.045c-.162-7.926-.623-18.793-1.715-30.165-.786.27-1.757.528-2.692.528a28.5 28.5 0 0 1-19.948-8.12c-1.862-1.822-3.662-3.766-4.955-6.037l-.006-.004c-1.294 2.266-2.705 4.213-4.563 6.032a28.48 28.48 0 0 1-19.947 8.125c-7.748 0-14.778-3.11-19.906-8.123a28.025 28.025 0 0 1-4.78-6.155 27.99 27.99 0 0 1-4.736 6.155 28.49 28.49 0 0 1-19.95 8.124c-.27 0-.54-.012-.81-.02h-.007c-.27.008-.54.02-.813.02a28.49 28.49 0 0 1-19.95-8.123 27.992 27.992 0 0 1-4.736-6.155zm-20.486 26.49l-.002.01h.015c8.113.017 15.32 0 24.25 9.746 7.028-.737 14.372-1.105 21.722-1.094h.006c7.35-.01 14.694.357 21.723 1.094 8.93-9.747 16.137-9.73 24.25-9.746h.014l-.002-.01c3.833 0 19.166 0 29.85 30.007L210 165.244c8.504 30.624-2.723 31.373-16.727 31.4-20.768-.773-32.267-15.855-32.267-30.935-11.496 1.884-24.907 2.826-38.318 2.827h-.006c-13.412 0-26.823-.943-38.318-2.827 0 15.08-11.5 30.162-32.267 30.935-14.004-.027-25.23-.775-16.726-31.4L46.85 124.08c10.684-30.007 26.017-30.007 29.85-30.007zm45.985 23.582v.006c-.02.02-21.863 20.08-25.79 27.215l14.304-.573v12.474c0 .584 5.74.346 11.486.08h.006c5.744.266 11.485.504 11.485-.08v-12.474l14.304.573c-3.928-7.135-25.79-27.215-25.79-27.215v-.006l-.003.002z"></path>
+            </svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:tavfic@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="width:16px;height:16px;">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+            </svg>
+        </a>
+    </div>
 </footer>
 
 <script>
@@ -931,10 +1028,10 @@
   });
 
   // Auto-number task list items
-  const tasks = document.querySelectorAll('#taskList .task-num');
-  tasks.forEach((el, i) => {
-    el.textContent = String(i + 1).padStart(2, '0');
-  });
+  // const tasks = document.querySelectorAll('#taskList .task-num');
+  // tasks.forEach((el, i) => {
+  //   el.textContent = String(i + 1).padStart(2, '0');
+  // });
 </script>
 
 </body>
