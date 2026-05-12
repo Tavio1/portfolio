@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ottavio Ficaccio | Portfolio</title>
+<title>Ottavio Ficaccio | Winners & Losers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -92,11 +92,9 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    /* TODO: Replace with your project's key art:
-       background-image: url('project-hero.jpg');
-       background-size: cover;
-       background-position: center; */
-    background: linear-gradient(145deg, #1c1c2e 0%, #2d1b4e 50%, #1a1228 100%);
+    background-image: url('../assets/winners-and-losers/hero.png');
+    background-size: cover;
+    background-position: center; 
     transform: scale(1.03);
     animation: heroZoom 10s ease-out forwards;
   }
@@ -180,7 +178,7 @@
 
   .slide-main {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     overflow: hidden;
     background: #111;
     position: relative;
@@ -673,10 +671,8 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="project-hero-content">
-    <!-- TODO: Replace with your project title -->
-    <h1 class="project-title">Project<br>Title Here</h1>
-    <!-- TODO: Replace with your project's platform/type label -->
-    <span class="project-eyebrow">PC · Unreal Engine 5 · 2024</span>
+    <h1 class="project-title">Winners<br>& Losers</h1>
+    <span class="project-eyebrow">PC · Unity · 2022</span>
     <a href="../index.html#portfolio" class="back-link">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
@@ -693,22 +689,11 @@
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
       <div class="slide-main" id="slideMain">
-        <!--
-          INSTRUCTIONS — Images slideshow:
-          Replace the placeholder divs below with <img> tags for each screenshot.
-          The JS reads all children of #slideMain — swap in real images like:
-          <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
-          <img src="screenshot-2.jpg" alt="AI behaviour tree" />
-          etc.
-          Only the active slide is shown; the rest are hidden by JS.
-
-          TODO: Input game images/gifs
-        -->
-        <div class="slide-placeholder" data-slide="1">SCREENSHOT 1 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="2">SCREENSHOT 2 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="3">SCREENSHOT 3 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="4">SCREENSHOT 4 — ADD IMAGE</div>
-        <div class="slide-placeholder" data-slide="5">SCREENSHOT 5 — ADD IMAGE</div>
+        <img src="../assets/winners-and-losers/main-menu.png" alt="Main Menu" />
+        <img src="../assets/winners-and-losers/letter.png" alt="First Letter" />
+        <img src="../assets/winners-and-losers/tutorial.png" alt="Tutorial" />
+        <img src="../assets/winners-and-losers/purchase-menu.png" alt="Purchase Menu" />
+        <img src="../assets/winners-and-losers/destruction.png" alt="Destruction" />
       </div>
 
       <div class="slide-controls">
@@ -728,20 +713,21 @@
     <!-- OVERVIEW -->
     <div class="content-section">
       <p class="section-label">Overview</p>
-      <h2 class="section-heading">About the Project</h2>
+      <h2 class="section-heading">About Winners & Losers</h2>
       <div class="overview-text">
-        <!--
-          TODO: Replace this text with your own project overview.
-          Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
-        -->
         <p>
-          Describe what your project is about here. What was the concept? What were you
-          trying to achieve or learn? What makes this project interesting or unique?
+          Winners & Losers is a short idle game that exposes the impacts of war. Play as Corporal
+          Portal on his mission to ravage the city of Luttenstadt. Which side of history will you be on? 
         </p>
         <p>
-          You can also talk about the context — was this a game jam, a solo passion project,
-          a university assignment, or a professional production? Add any relevant background
-          that helps the reader understand the scope and constraints.
+            This game was made as a creative project for an English class meant to explore the theme
+            of war and its effects. I created it by myself over the course of a month. I chose to 
+            create an exponential growth idle game to explore the topic because people often get lost
+            in the addiction of continuing, forgetting the initial goal and losing sight of everything else.
+            This project was my very first finished game, complete with a tutorial, finished gameplay, narrative & 
+            cutscenes, and an ending. Although it is nothing ground breaking, it taught me many foundational skills
+            about UI programming, game balance and flow, and using simple tools to create an experience
+            that leaves an impression on players. 
         </p>
       </div>
     </div>
@@ -751,34 +737,29 @@
       <p class="section-label">Responsibilities</p>
       <h2 class="section-heading">What I Did</h2>
       <ul class="task-list" id="taskList">
-        <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
-        -->
         <li>
           <span class="task-num">01</span>
-          <span>Describe a specific task or responsibility here — e.g. "Designed and implemented the player controller with support for keyboard, mouse, and gamepad input."</span>
+          <span>Implemented UI systems for menus and player HUD which are dynamically integrated and with cutscenes, various events, and win conditions</span>
         </li>
         <li>
           <span class="task-num">02</span>
-          <span>Another task — e.g. "Built an AI behaviour system using behaviour trees, blackboards, and custom perception queries."</span>
+          <span>Designed the core game loop and iteratively performed economy design to curate the intended game experience</span>
         </li>
         <li>
           <span class="task-num">03</span>
-          <span>Another task — e.g. "Designed the core game loop and win/loss conditions, including a capture-point conquest mode."</span>
+          <span>Scripted a tutorial manager that highlights various elements, provides textual descriptions, and waits for player interaction before continuing</span>
+        </li>
+        <li>
+          <span class="task-num">03</span>
+          <span>Developed a customizable exponential growth system for the costs of each type of unit that allowed for fast testing of values</span>
         </li>
         <li>
           <span class="task-num">04</span>
-          <span>Another task — e.g. "Created and iterated on a large open level using landscape sculpting, foliage placement, and modular assets."</span>
+          <span>Created animations and timelines for the final cutscene</span>
         </li>
         <li>
           <span class="task-num">05</span>
-          <span>Another task — e.g. "Implemented UI systems for player HUD, minimap, and objective tracking."</span>
-        </li>
-        <li>
-          <span class="task-num">06</span>
-          <span>Add or remove list items as needed for your specific project.</span>
+          <span>Made all of the art assets seen in the game with a cohesive artistic direction</span>
         </li>
       </ul>
     </div>
@@ -788,24 +769,11 @@
       <p class="section-label">Gameplay</p>
       <h2 class="section-heading">Video</h2>
       <div class="video-wrap">
-        <!--
-          TODO: TO EMBED A YOUTUBE VIDEO:
-          Replace the placeholder div below with:
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+        <iframe src="https://www.youtube.com/embed/K7Ar9DF8JDo?si=2suWH3o2kBEcPUrp"
                   title="Gameplay video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-
-          TO EMBED A VIMEO VIDEO:
-          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen></iframe>
-        -->
-        <div class="video-placeholder">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          <p>Add your gameplay video URL above</p>
-        </div>
+                  allowfullscreen>
+        </iframe>
       </div>
     </div>
 
@@ -816,7 +784,6 @@
     <div class="meta-card">
       <div class="meta-title">Project Info</div>
 
-      <!-- TODO: Edit each meta-val with your project's details -->
       <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
@@ -824,12 +791,12 @@
 
       <div class="meta-row">
         <span class="meta-key">Software</span>
-        <span class="meta-val">Unreal Engine 5</span>
+        <span class="meta-val">Unity</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Duration</span>
-        <span class="meta-val">3 Months</span>
+        <span class="meta-val">1 Month</span>
       </div>
 
       <div class="meta-row">
@@ -839,35 +806,30 @@
 
       <div class="meta-row">
         <span class="meta-key">My Role</span>
-        <span class="meta-val">Game Designer &amp; Programmer</span>
+        <span class="meta-val">Programmer &amp; Game Designer</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Status</span>
-        <span class="meta-val">Prototype / Shipped / In Development</span>
+        <span class="meta-val">Shipped</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
           <!-- Add or remove tags to match your project -->
-          <span class="tag">Blueprints</span>
-          <span class="tag">C++</span>
-          <span class="tag">AI Design</span>
-          <span class="tag">Level Design</span>
-          <span class="tag">UI</span>
+          <span class="tag">System Design</span>
+          <span class="tag">Balance</span>
+          <span class="tag">UI Programming</span>
+          <span class="tag">Economy Design</span>
         </div>
       </div>
 
       <!-- Optional links — remove any you don't need -->
       <div class="meta-links">
-        <a href="#" class="btn primary">
-          Play / Download
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        </a>
-        <a href="#" class="btn">
-          View on GitHub
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://typh0n4.itch.io/winners-and-losers" class="btn primary">
+          Play
+          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
       </div>
     </div>
