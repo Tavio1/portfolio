@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ottavio Ficaccio | Rigidbody Physics</title>
+<title>Ottavio Ficaccio | Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -96,9 +96,7 @@
        background-image: url('project-hero.jpg');
        background-size: cover;
        background-position: center; */
-    background-image: url('../assets/physics-sim/arcade-bg.png');
-    background-size: cover;
-    background-position: center; 
+    background: linear-gradient(145deg, #1c1c2e 0%, #2d1b4e 50%, #1a1228 100%);
     transform: scale(1.03);
     animation: heroZoom 10s ease-out forwards;
   }
@@ -676,9 +674,9 @@
   <div class="hero-overlay"></div>
   <div class="project-hero-content">
     <!-- TODO: Replace with your project title -->
-    <h1 class="project-title">Pinball<br>Physics Simulator</h1>
+    <h1 class="project-title">Project<br>Title Here</h1>
     <!-- TODO: Replace with your project's platform/type label -->
-    <span class="project-eyebrow">PC · Unity · 2025</span>
+    <span class="project-eyebrow">PC · Unreal Engine 5 · 2024</span>
     <a href="../index.html#portfolio" class="back-link">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
@@ -706,11 +704,11 @@
 
           TODO: Input game images/gifs
         -->
-        <img src="../assets/physics-sim/bouncing.gif" alt="Pinballs bouncing off obstacles" />
-        <img src="../assets/physics-sim/hit.gif" alt="Paddle hitting pinballs" />
-        <img src="../assets/physics-sim/collision.gif" alt="Pinballs colliding with each other" />
-        <img src="../assets/physics-sim/game-over.png" alt="Game Over Screen" />
-        <img src="../assets/physics-sim/playing.png" alt="New game started" />
+        <div class="slide-placeholder" data-slide="1">SCREENSHOT 1 — ADD IMAGE</div>
+        <div class="slide-placeholder" data-slide="2">SCREENSHOT 2 — ADD IMAGE</div>
+        <div class="slide-placeholder" data-slide="3">SCREENSHOT 3 — ADD IMAGE</div>
+        <div class="slide-placeholder" data-slide="4">SCREENSHOT 4 — ADD IMAGE</div>
+        <div class="slide-placeholder" data-slide="5">SCREENSHOT 5 — ADD IMAGE</div>
       </div>
 
       <div class="slide-controls">
@@ -730,27 +728,20 @@
     <!-- OVERVIEW -->
     <div class="content-section">
       <p class="section-label">Overview</p>
-      <h2 class="section-heading">About the Simluator</h2>
+      <h2 class="section-heading">About the Project</h2>
       <div class="overview-text">
         <!--
           TODO: Replace this text with your own project overview.
           Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
         -->
         <p>
-          This is a project I completed for a class and then expanded upon, it is a simplified 
-          pinball machine game with a completely custom physics and collision system. My core 
-          focus was implementing a custom ECS (Entity Component System) architecture from 
-          scratch and using it to process the real-time physics simulation, which included 
-          collision detection and response, rigid body movement, and player input.
+          Describe what your project is about here. What was the concept? What were you
+          trying to achieve or learn? What makes this project interesting or unique?
         </p>
         <p>
-          This was a solo university assignment for one of my classes at McGill. When working on
-          the project and inspired by my internship at Perfect Storm, I decided to expand on 
-          the basic requirements and designed a functional ECS architecture, building out a 
-          ColliderComponent, PlayerComponent, and RigidbodyComponent, each managed by a respective 
-          system class with a shared IGameSystem interface. A GameManager ties it all together, 
-          ticking each system in order and handling object spawning/deletion. It learned a ton about how 
-          physics engines actually work under the hood.
+          You can also talk about the context — was this a game jam, a solo passion project,
+          a university assignment, or a professional production? Add any relevant background
+          that helps the reader understand the scope and constraints.
         </p>
       </div>
     </div>
@@ -767,41 +758,37 @@
         -->
         <li>
           <span class="task-num">01</span>
-          <span>Designed and implemented an ECS architecture with three components and dedicated system classes each implementing a GameSystem interface</span>
+          <span>Describe a specific task or responsibility here — e.g. "Designed and implemented the player controller with support for keyboard, mouse, and gamepad input."</span>
         </li>
         <li>
           <span class="task-num">02</span>
-          <span>Built a GameManager to tick all systems in order and handle full object lifecycle, including spawn setup and deletion cleanup</span>
+          <span>Another task — e.g. "Built an AI behaviour system using behaviour trees, blackboards, and custom perception queries."</span>
         </li>
         <li>
           <span class="task-num">03</span>
-          <span>Implemented rigid body physics simulation with customizable gravitational acceleration, per-surface energy absorption, and both static and dynamic collision resolution</span>
+          <span>Another task — e.g. "Designed the core game loop and win/loss conditions, including a capture-point conquest mode."</span>
         </li>
         <li>
           <span class="task-num">04</span>
-          <span>Developed collision detection and response across multiple geometry types, including oirented bounding boxes and circles</span>
+          <span>Another task — e.g. "Created and iterated on a large open level using landscape sculpting, foliage placement, and modular assets."</span>
         </li>
         <li>
           <span class="task-num">05</span>
-          <span>Procedurally placed all interior obstacles at runtime with guaranteed non-overlap and full pinball clearance which are randomized during each session</span>
+          <span>Another task — e.g. "Implemented UI systems for player HUD, minimap, and objective tracking."</span>
         </li>
         <li>
           <span class="task-num">06</span>
-          <span>Created simple game logic handling point calculations, number of lives, game state, and managing the UI</span>
-        </li>
-        <li>
-          <span class="task-num">07</span>
-          <span>Supported two simultaneous pinballs with physically accurate ball-to-ball collision response</span>
+          <span>Add or remove list items as needed for your specific project.</span>
         </li>
       </ul>
     </div>
 
     <!-- GAMEPLAY VIDEO -->
-    <!--
     <div class="video-section">
       <p class="section-label">Gameplay</p>
       <h2 class="section-heading">Video</h2>
       <div class="video-wrap">
+        <!--
           TODO: TO EMBED A YOUTUBE VIDEO:
           Replace the placeholder div below with:
           <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
@@ -814,13 +801,13 @@
                   title="Gameplay video"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowfullscreen></iframe>
+        -->
         <div class="video-placeholder">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
           <p>Add your gameplay video URL above</p>
         </div>
       </div>
     </div>
-    -->
 
   </main>
 
@@ -837,12 +824,12 @@
 
       <div class="meta-row">
         <span class="meta-key">Software</span>
-        <span class="meta-val">Unity 6</span>
+        <span class="meta-val">Unreal Engine 5</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Duration</span>
-        <span class="meta-val">2 Weeks</span>
+        <span class="meta-val">3 Months</span>
       </div>
 
       <div class="meta-row">
@@ -852,29 +839,33 @@
 
       <div class="meta-row">
         <span class="meta-key">My Role</span>
-        <span class="meta-val">Programmer</span>
+        <span class="meta-val">Game Designer &amp; Programmer</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Status</span>
-        <span class="meta-val">Prototype</span>
+        <span class="meta-val">Prototype / Shipped / In Development</span>
       </div>
 
       <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
           <!-- Add or remove tags to match your project -->
-          <span class="tag">C#</span>
-          <span class="tag">Engine Programming</span>
-          <span class="tag">Physics Programming</span>
-          <span class="tag">UI Programming</span>
-          <span class="tag">ECS</span>
+          <span class="tag">Blueprints</span>
+          <span class="tag">C++</span>
+          <span class="tag">AI Design</span>
+          <span class="tag">Level Design</span>
+          <span class="tag">UI</span>
         </div>
       </div>
 
       <!-- Optional links — remove any you don't need -->
       <div class="meta-links">
-        <a href="https://github.com/Tavio1/COMP521_A2" class="btn primary">
+        <a href="#" class="btn primary">
+          Play / Download
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+        <a href="#" class="btn">
           View on GitHub
           <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         </a>
@@ -887,10 +878,10 @@
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
   <!-- Update href, eyebrow, and title for the next project page -->
-  <a href="shelly-snack-search.html" class="next-project-link">
+  <a href="raytracer.html" class="next-project-link">
     <div>
       <p class="next-label">Next Project</p>
-      <p class="next-title">Shelly's<br>Snack Search</p>
+      <p class="next-title">Raytraced<br>Graphics Renderer</p>
     </div>
     <div class="next-arrow">
       <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
