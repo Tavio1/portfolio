@@ -909,7 +909,7 @@
     </div>  
 
   <div class="portfolio-footer">
-    <a href="#" class="view-all btn" id="viewAllBtn">View all projects →</a>
+    <a href="#" class="view-all btn" id="viewAllBtn">View all projects ↓</a>
   </div>
 </section>
 
@@ -1063,7 +1063,7 @@
   viewAllBtn.addEventListener('click', function(e) {
     e.preventDefault();
     const isVisible = extraProjects.classList.toggle('visible');
-    viewAllBtn.textContent = isVisible ? 'Show less ↑' : 'View all projects →';
+    viewAllBtn.textContent = isVisible ? 'Show less ↑' : 'View all projects ↓';
 
     if (isVisible) {
       // Stagger each card's fade-in slightly after the previous one
