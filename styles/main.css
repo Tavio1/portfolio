@@ -670,4 +670,8 @@ footer {
     .nav-links { display: none; }
     h1 { font-size: 3.5rem; }
     .form-row { grid-template-columns: 1fr; }
+
+    .portfolio-filters {
+        display: none;
+    }
 }
