@@ -236,6 +236,43 @@
   .portfolio-header h2 { margin-bottom: 0; }
 
   
+  .portfolio-filters {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.6rem;
+    }
+
+    .filter-btns {
+        display: flex;
+        gap: 0.6rem;
+    }
+
+    .filter-btn {
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 0.5rem 1.2rem;
+        border: 1px solid var(--accent);
+        background: var(--accent);
+        color: var(--off-white);
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .filter-btn.inactive {
+        background: transparent;
+        border-color: rgba(176,170,158,0.3);
+        color: var(--warm-gray);
+    }
+
+    .filter-btn:hover {
+        border-color: var(--accent-light);
+        color: var(--off-white);
+    }
+
   .portfolio-footer {
     display: flex;
     align-items: flex-end;
@@ -263,7 +300,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1px;
-    background: var(--border);
+    background: var(--black);
   }
 
   .project-grid-extra {
@@ -312,6 +349,15 @@
   .project-card.featured { grid-column: span 7; min-height: 520px; }
   .project-card.medium   { grid-column: span 5; min-height: 520px; }
   .project-card.small    { grid-column: span 4; min-height: 320px; }
+
+  
+  .project-card.hidden {
+    display: none;
+  }
+
+  .project-card.clamped {
+    display: none;
+  }
 
   .card-img {
     width: 100%;
@@ -734,18 +780,25 @@
 
 <!-- ── PORTFOLIO ── -->
 <section id="portfolio">
-  <div class="portfolio-header">
-    <div>
-      <p class="section-label">Selected Work</p>
-      <h2>Portfolio</h2>
+    <div class="portfolio-header">
+        <div>
+            <p class="section-label">Selected Work</p>
+            <h2>Portfolio</h2>
+        </div>
+        <div class="portfolio-filters">
+            <p class="section-label">Filter by Specialty</p>
+            <div class="filter-btns">
+            <button class="filter-btn inactive" id="filterProgramming" data-filter="programming">Programming</button>
+            <button class="filter-btn inactive" id="filterDesign" data-filter="design">Game Design</button>
+            </div>
+        </div>
     </div>
-  </div>
 
   <div class="project-grid">
 
     <!-- PROJECT 1 — Featured (large left) -->
     <!-- To link to a project page: change href="project-1.html" -->
-    <a href="projects/pas-de-deux.html" class="project-card featured">
+    <a href="projects/pas-de-deux.html" class="project-card featured" data-specialty="both">
       <div class="card-img">
         <img src="assets/pas-de-deux/splash-cropped.png" alt="Pas de Deux Cover Art" />
       </div>
@@ -765,7 +818,7 @@
     </a>
 
     <!-- PROJECT 2 — Medium (right) -->
-    <a href="projects/perfect-storm.html" class="project-card medium">
+    <a href="projects/perfect-storm.html" class="project-card medium" data-specialty="both">
       <div class="card-img">
         <img src="assets/perfect-storm/splash.png" alt="Perfect Storm Cover Art" style="object-position: left center;"/>
       </div>
@@ -786,8 +839,7 @@
       </div>
     </a>
 
-    <!-- PROJECT 3, 4, 5 — Small bottom row -->
-    <a href="projects/anvil.html" class="project-card small">
+    <a href="projects/anvil.html" class="project-card small" data-specialty="programming">
       <div class="card-img">
         <img src="assets/anvil/splash.png" alt="Anvil Cover Art" />
       </div>
@@ -806,7 +858,7 @@
       </div>
     </a>
 
-    <a href="projects/malefica.html" class="project-card small">
+    <a href="projects/malefica.html" class="project-card small" data-specialty="design">
       <div class="card-img">
         <img src="assets/malefica/splash.png" alt="Malefica Cover Art" />
       </div>
@@ -825,7 +877,7 @@
       </div>
     </a>
 
-    <a href="projects/physics-sim.html" class="project-card small">
+    <a href="projects/physics-sim.html" class="project-card small" data-specialty="programming">
       <div class="card-img">
         <img src="assets/physics-sim/splash.png" alt="Physics Simulation Background" />
       </div>
@@ -844,13 +896,7 @@
       </div>
     </a>
 
-  </div>
-
-  <div class="project-grid-extra" id="extraProjects">
-
-    <!-- Add your extra project cards here, same structure as existing ones -->
-    <!-- Example: -->
-    <a href="projects/shelly-snack-search.html" class="project-card small">
+    <a href="projects/shelly-snack-search.html" class="project-card small" data-specialty="design">
         <div class="card-img">
         <img src="assets/shelly-snack-search/splash.png" alt="Project cover" />
         </div>
@@ -868,7 +914,8 @@
         </div>
         </div>
     </a>
-    <a href="projects/winners-and-losers.html" class="project-card small">
+
+    <a href="projects/winners-and-losers.html" class="project-card small" data-specialty="both">
         <div class="card-img">
         <img src="assets/winners-and-losers/splash.png" alt="Project cover" />
         </div>
@@ -887,7 +934,8 @@
         </div>
         </div>
     </a>
-    <a href="projects/raytracer.html" class="project-card small">
+
+    <a href="projects/raytracer.html" class="project-card small" data-specialty="programming">
         <div class="card-img">
         <img src="assets/raytracer/splash.png" alt="Project cover" />
         </div>
@@ -905,8 +953,7 @@
         </div>
         </div>
     </a>
-
-    </div>  
+  </div>
 
   <div class="portfolio-footer">
     <a href="#" class="view-all btn" id="viewAllBtn">View all projects ↓</a>
@@ -1055,29 +1102,184 @@
   updateNav(); // run once on load
 </script>
 
-<script>
+<script> 
+    const filterProgramming = document.getElementById('filterProgramming');
+    const filterDesign = document.getElementById('filterDesign');
+    const filterViewAll = document.getElementById('viewAllBtn');
+    const allCards = document.querySelectorAll('.project-card');
+
+    let programmingActive = false;
+    let designActive = false;
+    let viewAll = false;
+
+    function applyFilters() {
+        var count = 0;
+        //var shouldShowBtn = viewAll;
+        allCards.forEach(card => {
+            const specialty = card.dataset.specialty;
+            var showProgramming = programmingActive && (specialty === 'programming' || specialty === 'both');
+            var showDesign = designActive && (specialty === 'design' || specialty === 'both');
+            const showTop5 = viewAll || (count < 5);
+
+            // If nothing is selected show everything
+            if (!programmingActive && !designActive) {
+                showProgramming = true;
+                showDesign = true;
+            }
+
+            if ((showProgramming || showDesign)) {
+                card.classList.remove('hidden');
+                count++;
+                if (!showTop5) {
+                    card.classList.add('clamped');
+                }
+                else {
+                    card.classList.remove('clamped');
+                }
+            } else {
+                card.classList.add('hidden');
+                card.classList.remove('clamped');
+                //if (showProgramming || showDesign) shouldShowBtn = true;
+            }
+
+        });
+
+        // Hide the button if clicking it wouldn't do anything
+        const clampedCardsCount = Array.from(document.querySelectorAll('.project-card.clamped')).length;
+        const visibleCardsCount = Array.from(document.querySelectorAll('.project-card:not(.hidden, .clamped)')).length;
+        const shouldShowBtn = clampedCardsCount > 0 || visibleCardsCount > 5;
+        viewAllBtn.style.display = shouldShowBtn ? 'inline-block' : 'none';
+    }
+
+    filterProgramming.addEventListener('click', () => {
+        programmingActive = !programmingActive;
+        filterProgramming.classList.toggle('inactive', !programmingActive);
+        applyFilters();
+    });
+
+    filterDesign.addEventListener('click', () => {
+        designActive = !designActive;
+        filterDesign.classList.toggle('inactive', !designActive);
+        applyFilters();
+    });
+
+    filterViewAll.addEventListener('click', function(e) {
+        e.preventDefault();
+        viewAll = !viewAll;
+        viewAllBtn.textContent = viewAll ? 'Show less ↑' : 'View all projects ↓';
+        applyFilters();
+    });
+
+    // Run on load so filtering and clamping are both applied before first paint
+    applyFilters();
+</script>
+
+<!-- <script>
+    const viewAllBtn = document.getElementById('viewAllBtn');
+    const extraProjects = document.getElementById('extraProjects');
+    const extraCards = extraProjects.querySelectorAll('.project-card');
+
+    viewAllBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isVisible = extraProjects.classList.toggle('visible');
+        viewAllBtn.textContent = isVisible ? 'Show less ↑' : 'View all projects ↓';
+
+        if (isVisible) {
+            // Stagger each card's fade-in slightly after the previous one
+            extraCards.forEach((card, i) => {
+                card.style.transitionDelay = `${0.2 + i * 0.08}s`;
+            });
+        } else {
+            // Remove delays immediately on collapse so cards don't linger
+            extraCards.forEach(card => {
+                card.style.transitionDelay = '0s';
+            });
+        }
+    });
+</script> -->
+
+<!-- <script>
   const viewAllBtn = document.getElementById('viewAllBtn');
-  const extraProjects = document.getElementById('extraProjects');
-  const extraCards = extraProjects.querySelectorAll('.project-card');
+  let allVisible = false;
+
+  function applyVisibility() {
+    const visibleCards = Array.from(document.querySelectorAll('.project-card:not(.hidden)'));
+    
+    visibleCards.forEach((card, i) => {
+      if (allVisible || i < 5) {
+        card.classList.remove('clamped');
+      } else {
+        card.classList.add('clamped');
+      }
+    });
+
+    // Hide the button if there are 5 or fewer visible cards
+    const shouldShowBtn = visibleCards.length > 5;
+    viewAllBtn.style.display = shouldShowBtn ? 'inline-block' : 'none';
+  }
 
   viewAllBtn.addEventListener('click', function(e) {
     e.preventDefault();
-    const isVisible = extraProjects.classList.toggle('visible');
-    viewAllBtn.textContent = isVisible ? 'Show less ↑' : 'View all projects ↓';
+    allVisible = !allVisible;
 
-    if (isVisible) {
-      // Stagger each card's fade-in slightly after the previous one
-      extraCards.forEach((card, i) => {
-        card.style.transitionDelay = `${0.2 + i * 0.08}s`;
-      });
-    } else {
-      // Remove delays immediately on collapse so cards don't linger
-      extraCards.forEach(card => {
-        card.style.transitionDelay = '0s';
-      });
-    }
+    viewAllBtn.style.maxWidth = allVisible ? '140px' : '200px';
+    viewAllBtn.textContent = allVisible ? 'Show less ↑' : 'View all projects ↓';
+
+    applyVisibility();
   });
+
+  // Update applyFilters to also call applyVisibility after filtering
+  const _originalApplyFilters = applyFilters;
+  applyFilters = function() {
+    _originalApplyFilters();
+    // Reset to collapsed view whenever filters change
+    allVisible = false;
+    viewAllBtn.style.maxWidth = '200px';
+    viewAllBtn.textContent = 'View all projects ↓';
+    applyVisibility();
+  };
+
+  // Run on load
+  applyVisibility();
 </script>
+
+<script>
+  const filterProgramming = document.getElementById('filterProgramming');
+  const filterDesign = document.getElementById('filterDesign');
+  const allCards = document.querySelectorAll('.project-card');
+
+  let programmingActive = true;
+  let designActive = true;
+
+  function applyFilters() {
+    allCards.forEach(card => {
+      const specialty = card.dataset.specialty;
+      const showProgramming = programmingActive && (specialty === 'programming' || specialty === 'both');
+      const showDesign = designActive && (specialty === 'design' || specialty === 'both');
+
+      if (showProgramming || showDesign) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  filterProgramming.addEventListener('click', () => {
+    programmingActive = !programmingActive;
+    filterProgramming.classList.toggle('inactive', !programmingActive);
+    applyFilters();
+  });
+
+  filterDesign.addEventListener('click', () => {
+    designActive = !designActive;
+    filterDesign.classList.toggle('inactive', !designActive);
+    applyFilters();
+  });
+
+  // Run on load so filtering and clamping are both applied before first paint
+  applyFilters();
+</script> -->
 
 </body>
 </html>
