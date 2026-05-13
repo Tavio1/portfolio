@@ -10,86 +10,86 @@
 <link rel="stylesheet" href="../styles/project.css" />
 
 <style>
-  .hero-bg {
+.hero-bg {
     background-image: url('../assets/winners-and-losers/hero.png');
     background-size: cover;
     background-position: center; 
-  }
-  
-  .slide-main {
+}
+
+.slide-main {
     aspect-ratio: 4/3;
-  }
+}
 </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
 <nav>
-  <!-- Update href to point to your homepage file -->
-  <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
-  <ul class="nav-links">
+<!-- Update href to point to your homepage file -->
+<a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
+<ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../index.html#portfolio">Portfolio</a></li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../index.html#contact">Contact</a></li>
-  </ul>
+</ul>
 </nav>
 
 <!-- ── HERO ── -->
 <header class="project-hero">
-  <!-- TO ADD YOUR OWN HERO IMAGE:
-       Add to .hero-bg style: background-image: url('your-project-hero.jpg');
-  -->
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="project-hero-content">
+<!-- TO ADD YOUR OWN HERO IMAGE:
+    Add to .hero-bg style: background-image: url('your-project-hero.jpg');
+-->
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="project-hero-content">
     <h1 class="project-title">Winners<br>& Losers</h1>
     <span class="project-eyebrow">PC · Unity · 2022</span>
     <a href="../index.html#portfolio" class="back-link">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
     </a>
-  </div>
+</div>
 </header>
 
 <!-- ── MAIN CONTENT ── -->
 <div class="project-body">
 
-  <!-- LEFT COLUMN -->
-  <main>
+<!-- LEFT COLUMN -->
+<main>
 
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
-      <div class="slide-main" id="slideMain">
+    <div class="slide-main" id="slideMain">
         <img src="../assets/winners-and-losers/main-menu.png" alt="Main Menu" />
         <img src="../assets/winners-and-losers/letter.png" alt="First Letter" />
         <img src="../assets/winners-and-losers/tutorial.png" alt="Tutorial" />
         <img src="../assets/winners-and-losers/purchase-menu.png" alt="Purchase Menu" />
         <img src="../assets/winners-and-losers/destruction.png" alt="Destruction" />
-      </div>
+    </div>
 
-      <div class="slide-controls">
+    <div class="slide-controls">
         <button class="slide-btn" id="prevBtn" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <button class="slide-btn" id="nextBtn" aria-label="Next slide" style="border-right:none;border-left:1px solid var(--border);">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <span class="slide-counter" id="slideCounter">1 / 5</span>
         <div class="slide-dots" id="slideDots"></div>
-      </div>
+    </div>
 
-      <div class="slide-thumbs" id="slideThumbs"></div>
+    <div class="slide-thumbs" id="slideThumbs"></div>
     </div>
 
     <!-- OVERVIEW -->
     <div class="content-section">
-      <p class="section-label">Overview</p>
-      <h2 class="section-heading">About Winners & Losers</h2>
-      <div class="overview-text">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">About Winners & Losers</h2>
+    <div class="overview-text">
         <p>
-          Winners & Losers is a short idle game that exposes the impacts of war. Play as Corporal
-          Portal on his mission to ravage the city of Luttenstadt. Which side of history will you be on? 
+        Winners & Losers is a short idle game that exposes the impacts of war. Play as Corporal
+        Portal on his mission to ravage the city of Luttenstadt. Which side of history will you be on? 
         </p>
         <p>
             This game was made as a creative project for an English class meant to explore the theme
@@ -101,132 +101,132 @@
             about UI programming, game balance and flow, and using simple tools to create an experience
             that leaves an impression on players. 
         </p>
-      </div>
+    </div>
     </div>
 
     <!-- TASKS / RESPONSIBILITIES -->
     <div class="content-section">
-      <p class="section-label">Responsibilities</p>
-      <h2 class="section-heading">What I Did</h2>
-      <ul class="task-list" id="taskList">
+    <p class="section-label">Responsibilities</p>
+    <h2 class="section-heading">What I Did</h2>
+    <ul class="task-list" id="taskList">
         <li>
-          <span class="task-num">01</span>
-          <span>Implemented UI systems for menus and player HUD which are dynamically integrated and with cutscenes, various events, and win conditions</span>
+        <span class="task-num">01</span>
+        <span>Implemented UI systems for menus and player HUD which are dynamically integrated and with cutscenes, various events, and win conditions</span>
         </li>
         <li>
-          <span class="task-num">02</span>
-          <span>Designed the core game loop and iteratively performed economy design to curate the intended game experience</span>
+        <span class="task-num">02</span>
+        <span>Designed the core game loop and iteratively performed economy design to curate the intended game experience</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Scripted a tutorial manager that highlights various elements, provides textual descriptions, and waits for player interaction before continuing</span>
+        <span class="task-num">03</span>
+        <span>Scripted a tutorial manager that highlights various elements, provides textual descriptions, and waits for player interaction before continuing</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Developed a customizable exponential growth system for the costs of each type of unit that allowed for fast testing of values</span>
+        <span class="task-num">03</span>
+        <span>Developed a customizable exponential growth system for the costs of each type of unit that allowed for fast testing of values</span>
         </li>
         <li>
-          <span class="task-num">04</span>
-          <span>Created animations and timelines for the final cutscene</span>
+        <span class="task-num">04</span>
+        <span>Created animations and timelines for the final cutscene</span>
         </li>
         <li>
-          <span class="task-num">05</span>
-          <span>Made all of the art assets seen in the game with a cohesive artistic direction</span>
+        <span class="task-num">05</span>
+        <span>Made all of the art assets seen in the game with a cohesive artistic direction</span>
         </li>
-      </ul>
+    </ul>
     </div>
 
     <!-- GAMEPLAY VIDEO -->
     <div class="video-section">
-      <p class="section-label">Gameplay</p>
-      <h2 class="section-heading">Video</h2>
-      <div class="video-wrap">
+    <p class="section-label">Gameplay</p>
+    <h2 class="section-heading">Video</h2>
+    <div class="video-wrap">
         <iframe src="https://www.youtube.com/embed/K7Ar9DF8JDo?si=2suWH3o2kBEcPUrp"
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
         </iframe>
-      </div>
+    </div>
     </div>
 
-  </main>
+</main>
 
-  <!-- RIGHT SIDEBAR -->
-  <aside class="sidebar">
+<!-- RIGHT SIDEBAR -->
+<aside class="sidebar">
     <div class="meta-card">
-      <div class="meta-title">Project Info</div>
+    <div class="meta-title">Project Info</div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Software</span>
         <span class="meta-val">Unity</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Duration</span>
         <span class="meta-val">1 Month</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Team Size</span>
         <span class="meta-val">Solo</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">My Role</span>
         <span class="meta-val">Programmer &amp; Game Designer</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Status</span>
         <span class="meta-val">Shipped</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
-          <!-- Add or remove tags to match your project -->
-          <span class="tag">System Design</span>
-          <span class="tag">Balance</span>
-          <span class="tag">UI Programming</span>
-          <span class="tag">Economy Design</span>
+        <!-- Add or remove tags to match your project -->
+        <span class="tag">System Design</span>
+        <span class="tag">Balance</span>
+        <span class="tag">UI Programming</span>
+        <span class="tag">Economy Design</span>
         </div>
-      </div>
-
-      <!-- Optional links — remove any you don't need -->
-      <div class="meta-links">
-        <a href="https://typh0n4.itch.io/winners-and-losers" class="btn primary">
-          Play
-          <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
-      </div>
     </div>
-  </aside>
+
+    <!-- Optional links — remove any you don't need -->
+    <div class="meta-links">
+        <a href="https://typh0n4.itch.io/winners-and-losers" class="btn primary">
+        Play
+        <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+    </div>
+    </div>
+</aside>
 
 </div>
 
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
-  <!-- Update href, eyebrow, and title for the next project page -->
-  <a href="raytracer.html" class="next-project-link">
+<!-- Update href, eyebrow, and title for the next project page -->
+<a href="raytracer.html" class="next-project-link">
     <div>
-      <p class="next-label">Next Project</p>
-      <p class="next-title">tracr:<br>Graphics Renderer</p>
+    <p class="next-label">Next Project</p>
+    <p class="next-title">tracr:<br>Graphics Renderer</p>
     </div>
     <div class="next-arrow">
-      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
     </div>
-  </a>
+</a>
 </div>
 
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
-  <div class="footer-socials">
+<div class="footer-socials">
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -247,16 +247,16 @@
 </footer>
 
 <script>
-  // ── SLIDESHOW ──
-  const mainEl = document.getElementById('slideMain');
-  const slides = Array.from(mainEl.children);
-  const counter = document.getElementById('slideCounter');
-  const dotsEl  = document.getElementById('slideDots');
-  const thumbsEl = document.getElementById('slideThumbs');
-  let current = 0;
+// ── SLIDESHOW ──
+const mainEl = document.getElementById('slideMain');
+const slides = Array.from(mainEl.children);
+const counter = document.getElementById('slideCounter');
+const dotsEl  = document.getElementById('slideDots');
+const thumbsEl = document.getElementById('slideThumbs');
+let current = 0;
 
-  // Build dots and thumbnails from whatever slides exist
-  slides.forEach((slide, i) => {
+// Build dots and thumbnails from whatever slides exist
+slides.forEach((slide, i) => {
     // Dot
     const dot = document.createElement('button');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -271,19 +271,19 @@
     // If the slide has an img child, clone it for the thumb
     const img = slide.tagName === 'IMG' ? slide : slide.querySelector('img');
     if (img) {
-      const tImg = document.createElement('img');
-      tImg.src = img.src;
-      tImg.alt = img.alt || '';
-      thumb.appendChild(tImg);
+    const tImg = document.createElement('img');
+    tImg.src = img.src;
+    tImg.alt = img.alt || '';
+    thumb.appendChild(tImg);
     } else {
-      thumb.textContent = i + 1;
+    thumb.textContent = i + 1;
     }
 
     thumb.addEventListener('click', () => goTo(i));
     thumbsEl.appendChild(thumb);
-  });
+});
 
-  function goTo(n) {
+function goTo(n) {
     slides[current].style.display = 'none';
     document.querySelectorAll('.dot')[current].classList.remove('active');
     document.querySelectorAll('.thumb')[current].classList.remove('active');
@@ -297,26 +297,26 @@
 
     // Scroll thumb into view
     document.querySelectorAll('.thumb')[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
+}
 
-  // Hide all but first on init
-  slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
-  counter.textContent = '1 / ' + slides.length;
+// Hide all but first on init
+slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
+counter.textContent = '1 / ' + slides.length;
 
-  document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
+// Keyboard navigation
+document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
-  });
+});
 
-  // Auto-number task list items
-  const tasks = document.querySelectorAll('#taskList .task-num');
-  tasks.forEach((el, i) => {
+// Auto-number task list items
+const tasks = document.querySelectorAll('#taskList .task-num');
+tasks.forEach((el, i) => {
     el.textContent = String(i + 1).padStart(2, '0');
-  });
+});
 </script>
 
 </body>

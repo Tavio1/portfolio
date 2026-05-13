@@ -10,35 +10,35 @@
 <link rel="stylesheet" href="../styles/project.css" />
 
 <style>
-  .hero-bg {
+.hero-bg {
     background-image: url('../assets/shelly-snack-search/splash-uncropped.png');
     background-size: cover;
     background-position: center bottom; 
-  }
+}
 </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
 <nav>
-  <!-- Update href to point to your homepage file -->
-  <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
-  <ul class="nav-links">
+<!-- Update href to point to your homepage file -->
+<a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
+<ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../index.html#portfolio">Portfolio</a></li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../index.html#contact">Contact</a></li>
-  </ul>
+</ul>
 </nav>
 
 <!-- ── HERO ── -->
 <header class="project-hero">
-  <!-- TO ADD YOUR OWN HERO IMAGE:
-       Add to .hero-bg style: background-image: url('your-project-hero.jpg');
-  -->
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="project-hero-content">
+<!-- TO ADD YOUR OWN HERO IMAGE:
+    Add to .hero-bg style: background-image: url('your-project-hero.jpg');
+-->
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="project-hero-content">
     <!-- TODO: Replace with your project title -->
     <h1 class="project-title">Shelly's<br>Snack Search</h1>
     <!-- TODO: Replace with your project's platform/type label -->
@@ -47,58 +47,58 @@
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
     </a>
-  </div>
+</div>
 </header>
 
 <!-- ── MAIN CONTENT ── -->
 <div class="project-body">
 
-  <!-- LEFT COLUMN -->
-  <main>
+<!-- LEFT COLUMN -->
+<main>
 
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
-      <div class="slide-main" id="slideMain">
+    <div class="slide-main" id="slideMain">
         <!--
-          INSTRUCTIONS — Images slideshow:
-          Replace the placeholder divs below with <img> tags for each screenshot.
-          The JS reads all children of #slideMain — swap in real images like:
-          <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
-          <img src="screenshot-2.jpg" alt="AI behaviour tree" />
-          etc.
-          Only the active slide is shown; the rest are hidden by JS.
+        INSTRUCTIONS — Images slideshow:
+        Replace the placeholder divs below with <img> tags for each screenshot.
+        The JS reads all children of #slideMain — swap in real images like:
+        <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
+        <img src="screenshot-2.jpg" alt="AI behaviour tree" />
+        etc.
+        Only the active slide is shown; the rest are hidden by JS.
 
-          TODO: Input game images/gifs
+        TODO: Input game images/gifs
         -->
         <img src="../assets/shelly-snack-search/main-menu.png" alt="Main Menu" />
         <img src="../assets/shelly-snack-search/gameplay-1.png" alt="Gameplay 1" />
         <img src="../assets/shelly-snack-search/gacha.png" alt="Gacha Skin Mechanic" />
         <img src="../assets/shelly-snack-search/gameplay-2.png" alt="Gameplay 2" />
         <img src="../assets/shelly-snack-search/buff-1.png" alt="Alternate Skin" />
-      </div>
+    </div>
 
-      <div class="slide-controls">
+    <div class="slide-controls">
         <button class="slide-btn" id="prevBtn" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <button class="slide-btn" id="nextBtn" aria-label="Next slide" style="border-right:none;border-left:1px solid var(--border);">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <span class="slide-counter" id="slideCounter">1 / 5</span>
         <div class="slide-dots" id="slideDots"></div>
-      </div>
+    </div>
 
-      <div class="slide-thumbs" id="slideThumbs"></div>
+    <div class="slide-thumbs" id="slideThumbs"></div>
     </div>
 
     <!-- OVERVIEW -->
     <div class="content-section">
-      <p class="section-label">Overview</p>
-      <h2 class="section-heading">About Shelly's Snack Search</h2>
-      <div class="overview-text">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">About Shelly's Snack Search</h2>
+    <div class="overview-text">
         <!--
-          TODO: Replace this text with your own project overview.
-          Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
+        TODO: Replace this text with your own project overview.
+        Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
         -->
         <p>
             Shelly's Snack Search is an arcade platformer game where you play as Shelly the 
@@ -112,151 +112,151 @@
             time constraints. I designed the level and the mechanics, as well as directed and 
             organized the team of artists and programmers.
         </p>
-      </div>
+    </div>
     </div>
 
     <!-- TASKS / RESPONSIBILITIES -->
     <div class="content-section">
-      <p class="section-label">Responsibilities</p>
-      <h2 class="section-heading">What I Did</h2>
-      <ul class="task-list" id="taskList">
+    <p class="section-label">Responsibilities</p>
+    <h2 class="section-heading">What I Did</h2>
+    <ul class="task-list" id="taskList">
         <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
+        TODO: Replace each <li> with your actual tasks.
+        Keep them specific and action-oriented.
+        Add or remove items as needed.
         -->
         <li>
-          <span class="task-num">01</span>
-          <span>Designed the gameplay loop and the core web-shooting mechanic.</span>
+        <span class="task-num">01</span>
+        <span>Designed the gameplay loop and the core web-shooting mechanic.</span>
         </li>
         <li>
-          <span class="task-num">02</span>
-          <span>Outlined the level layout and necessary assets and then built the level in Unity.</span>
+        <span class="task-num">02</span>
+        <span>Outlined the level layout and necessary assets and then built the level in Unity.</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Performed UI and UX polish by delving into code and making fixes</span>
+        <span class="task-num">03</span>
+        <span>Performed UI and UX polish by delving into code and making fixes</span>
         </li>
         <li>
-          <span class="task-num">04</span>
-          <span>Implemented the audio system and SFX to provide useful feedback to players</span>
+        <span class="task-num">04</span>
+        <span>Implemented the audio system and SFX to provide useful feedback to players</span>
         </li>
         <li>
-          <span class="task-num">05</span>
-          <span>Coordinated a team working together for the first time through the entire development cycle under time constraints</span>
+        <span class="task-num">05</span>
+        <span>Coordinated a team working together for the first time through the entire development cycle under time constraints</span>
         </li>
-      </ul>
+    </ul>
     </div>
 
     <!-- GAMEPLAY VIDEO -->
     <div class="video-section">
-      <p class="section-label">Gameplay</p>
-      <h2 class="section-heading">Video</h2>
-      <div class="video-wrap">
+    <p class="section-label">Gameplay</p>
+    <h2 class="section-heading">Video</h2>
+    <div class="video-wrap">
         <!--
-          TODO: TO EMBED A YOUTUBE VIDEO:
-          Replace the placeholder div below with:
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+        TODO: TO EMBED A YOUTUBE VIDEO:
+        Replace the placeholder div below with:
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
-          TO EMBED A VIMEO VIDEO:
-          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen></iframe>
+        TO EMBED A VIMEO VIDEO:
+        <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
         -->
         <iframe src="https://www.youtube.com/embed/CX--_cuZi98?si=V2eoDks7AhbJyxqx" 
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
         </iframe>
-      </div>
+    </div>
     </div>
 
-  </main>
+</main>
 
-  <!-- RIGHT SIDEBAR -->
-  <aside class="sidebar">
+<!-- RIGHT SIDEBAR -->
+<aside class="sidebar">
     <div class="meta-card">
-      <div class="meta-title">Project Info</div>
+    <div class="meta-title">Project Info</div>
 
-      <!-- TODO: Edit each meta-val with your project's details -->
-      <div class="meta-row">
+    <!-- TODO: Edit each meta-val with your project's details -->
+    <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Software</span>
         <span class="meta-val">Unity 6</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Duration</span>
         <span class="meta-val">48 Hours</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Team Size</span>
         <span class="meta-val">8</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">My Role</span>
         <span class="meta-val">Team Lead &amp; Game Designer</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Status</span>
         <span class="meta-val">Shipped</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
-          <!-- Add or remove tags to match your project -->
-          <span class="tag">Gameplay Design</span>
-          <span class="tag">Level Design</span>
-          <span class="tag">Audio Programming</span>
+        <!-- Add or remove tags to match your project -->
+        <span class="tag">Gameplay Design</span>
+        <span class="tag">Level Design</span>
+        <span class="tag">Audio Programming</span>
         </div>
-      </div>
+    </div>
 
-      <!-- Optional links — remove any you don't need -->
-      <div class="meta-links">
+    <!-- Optional links — remove any you don't need -->
+    <div class="meta-links">
         <a href="https://flyingsheep22.itch.io/shellys-snack-search" class="btn primary">
-          Download
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
         <a href="https://drive.google.com/drive/folders/165h8gAMfcM6p3rJWN7KmhTnZP9rBQ9We?usp=sharing" class="btn">
-          See Documentation
-          <svg viewBox="0 0 24 24"><path d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3"/></svg>
+        See Documentation
+        <svg viewBox="0 0 24 24"><path d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3"/></svg>
         </a>
-      </div>
     </div>
-  </aside>
+    </div>
+</aside>
 
 </div>
 
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
-  <!-- Update href, eyebrow, and title for the next project page -->
-  <a href="winners-and-losers.html" class="next-project-link">
+<!-- Update href, eyebrow, and title for the next project page -->
+<a href="winners-and-losers.html" class="next-project-link">
     <div>
-      <p class="next-label">Next Project</p>
-      <p class="next-title">Winners<br>& Losers</p>
+    <p class="next-label">Next Project</p>
+    <p class="next-title">Winners<br>& Losers</p>
     </div>
     <div class="next-arrow">
-      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
     </div>
-  </a>
+</a>
 </div>
 
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
-  <div class="footer-socials">
+<div class="footer-socials">
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -277,16 +277,16 @@
 </footer>
 
 <script>
-  // ── SLIDESHOW ──
-  const mainEl = document.getElementById('slideMain');
-  const slides = Array.from(mainEl.children);
-  const counter = document.getElementById('slideCounter');
-  const dotsEl  = document.getElementById('slideDots');
-  const thumbsEl = document.getElementById('slideThumbs');
-  let current = 0;
+// ── SLIDESHOW ──
+const mainEl = document.getElementById('slideMain');
+const slides = Array.from(mainEl.children);
+const counter = document.getElementById('slideCounter');
+const dotsEl  = document.getElementById('slideDots');
+const thumbsEl = document.getElementById('slideThumbs');
+let current = 0;
 
-  // Build dots and thumbnails from whatever slides exist
-  slides.forEach((slide, i) => {
+// Build dots and thumbnails from whatever slides exist
+slides.forEach((slide, i) => {
     // Dot
     const dot = document.createElement('button');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -301,19 +301,19 @@
     // If the slide has an img child, clone it for the thumb
     const img = slide.tagName === 'IMG' ? slide : slide.querySelector('img');
     if (img) {
-      const tImg = document.createElement('img');
-      tImg.src = img.src;
-      tImg.alt = img.alt || '';
-      thumb.appendChild(tImg);
+    const tImg = document.createElement('img');
+    tImg.src = img.src;
+    tImg.alt = img.alt || '';
+    thumb.appendChild(tImg);
     } else {
-      thumb.textContent = i + 1;
+    thumb.textContent = i + 1;
     }
 
     thumb.addEventListener('click', () => goTo(i));
     thumbsEl.appendChild(thumb);
-  });
+});
 
-  function goTo(n) {
+function goTo(n) {
     slides[current].style.display = 'none';
     document.querySelectorAll('.dot')[current].classList.remove('active');
     document.querySelectorAll('.thumb')[current].classList.remove('active');
@@ -327,26 +327,26 @@
 
     // Scroll thumb into view
     document.querySelectorAll('.thumb')[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
+}
 
-  // Hide all but first on init
-  slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
-  counter.textContent = '1 / ' + slides.length;
+// Hide all but first on init
+slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
+counter.textContent = '1 / ' + slides.length;
 
-  document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
+// Keyboard navigation
+document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
-  });
+});
 
-  // Auto-number task list items
-  const tasks = document.querySelectorAll('#taskList .task-num');
-  tasks.forEach((el, i) => {
+// Auto-number task list items
+const tasks = document.querySelectorAll('#taskList .task-num');
+tasks.forEach((el, i) => {
     el.textContent = String(i + 1).padStart(2, '0');
-  });
+});
 </script>
 
 </body>

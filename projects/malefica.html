@@ -21,24 +21,24 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <!-- Update href to point to your homepage file -->
-  <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
-  <ul class="nav-links">
+<!-- Update href to point to your homepage file -->
+<a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
+<ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../index.html#portfolio">Portfolio</a></li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../index.html#contact">Contact</a></li>
-  </ul>
+</ul>
 </nav>
 
 <!-- ── HERO ── -->
 <header class="project-hero">
-  <!-- TO ADD YOUR OWN HERO IMAGE:
-       Add to .hero-bg style: background-image: url('your-project-hero.jpg');
-  -->
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="project-hero-content">
+<!-- TO ADD YOUR OWN HERO IMAGE:
+    Add to .hero-bg style: background-image: url('your-project-hero.jpg');
+-->
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="project-hero-content">
     <!-- TODO: Replace with your project title -->
     <h1 class="project-title">Malefica</h1>
     <!-- TODO: Replace with your project's platform/type label -->
@@ -47,92 +47,92 @@
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
     </a>
-  </div>
+</div>
 </header>
 
 <!-- ── MAIN CONTENT ── -->
 <div class="project-body">
 
-  <!-- LEFT COLUMN -->
-  <main>
+<!-- LEFT COLUMN -->
+<main>
 
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
-      <div class="slide-main" id="slideMain">
+    <div class="slide-main" id="slideMain">
         <!--
-          INSTRUCTIONS — Images slideshow:
-          Replace the placeholder divs below with <img> tags for each screenshot.
-          The JS reads all children of #slideMain — swap in real images like:
-          <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
-          <img src="screenshot-2.jpg" alt="AI behaviour tree" />
-          etc.
-          Only the active slide is shown; the rest are hidden by JS.
+        INSTRUCTIONS — Images slideshow:
+        Replace the placeholder divs below with <img> tags for each screenshot.
+        The JS reads all children of #slideMain — swap in real images like:
+        <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
+        <img src="screenshot-2.jpg" alt="AI behaviour tree" />
+        etc.
+        Only the active slide is shown; the rest are hidden by JS.
 
-          TODO: Input game images/gifs
+        TODO: Input game images/gifs
         -->
         <img src="../assets/malefica/town_square.png" alt="Gameplay 1" />
         <img src="../assets/malefica/placing.png" alt="Placing Talisman" />
         <img src="../assets/malefica/accuse-mode.png" alt="Accusing Mode" />
         <img src="../assets/malefica/standing.png" alt="Gameplay 2" />
         <img src="../assets/malefica/tutorial.png" alt="Game Tutorial" />
-      </div>
+    </div>
 
-      <div class="slide-controls">
+    <div class="slide-controls">
         <button class="slide-btn" id="prevBtn" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <button class="slide-btn" id="nextBtn" aria-label="Next slide" style="border-right:none;border-left:1px solid var(--border);">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <span class="slide-counter" id="slideCounter">1 / 5</span>
         <div class="slide-dots" id="slideDots"></div>
-      </div>
+    </div>
 
-      <div class="slide-thumbs" id="slideThumbs"></div>
+    <div class="slide-thumbs" id="slideThumbs"></div>
     </div>
 
     <!-- OVERVIEW -->
     <div class="content-section">
-      <p class="section-label">Overview</p>
-      <h2 class="section-heading">About Malefica</h2>
-      <div class="overview-text">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">About Malefica</h2>
+    <div class="overview-text">
         <!--
-          TODO: Replace this text with your own project overview.
-          Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
+        TODO: Replace this text with your own project overview.
+        Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
         -->
         <p>
-          Malefica is a stealth-based arcade game of suspicion and misdirection. Play as an evil witch
-          getting revenge on a mistrustful town. Raise villager paranoia by hexing others and leaving
-          talismans on their doorstep until they will burn anyone you accuse. But, be careful not to 
-          be found out yourself or you will face the same fate.
+        Malefica is a stealth-based arcade game of suspicion and misdirection. Play as an evil witch
+        getting revenge on a mistrustful town. Raise villager paranoia by hexing others and leaving
+        talismans on their doorstep until they will burn anyone you accuse. But, be careful not to 
+        be found out yourself or you will face the same fate.
         </p>
         <p>
-          This project was created in under 48 hours as a game jam submission. Malefica was my first
-          time working on a personal project with another game designer, so I let him take the lead on mechanics
-          and gameplay, where I focused on managing the rest of the team, assisting the programmers,
-          and the artistic direction. I got to play around a lot with using post processing, VFX,
-          and audio in order to cultivate an uneasy and eerie experience. With such a large team in
-          a game jam context, I spent a large portion of my time checking in with each team member across
-          all domains giving feedback, guiding next steps, helping solve problems, and adjusting the plan.
+        This project was created in under 48 hours as a game jam submission. Malefica was my first
+        time working on a personal project with another game designer, so I let him take the lead on mechanics
+        and gameplay, where I focused on managing the rest of the team, assisting the programmers,
+        and the artistic direction. I got to play around a lot with using post processing, VFX,
+        and audio in order to cultivate an uneasy and eerie experience. With such a large team in
+        a game jam context, I spent a large portion of my time checking in with each team member across
+        all domains giving feedback, guiding next steps, helping solve problems, and adjusting the plan.
         </p>
         <p>
-          Unfortunately, we were not able to complete the project within the time frame because my team
-          was also volunteering at the game jam and were pulled away from development during the last
-          hours of the competition. However, this experience taught me a lot about artistic direction,
-          scoping, and managing a large team.
+        Unfortunately, we were not able to complete the project within the time frame because my team
+        was also volunteering at the game jam and were pulled away from development during the last
+        hours of the competition. However, this experience taught me a lot about artistic direction,
+        scoping, and managing a large team.
         </p>
-      </div>
+    </div>
     </div>
 
     <!-- TASKS / RESPONSIBILITIES -->
     <div class="content-section">
-      <p class="section-label">Responsibilities</p>
-      <h2 class="section-heading">What I Did</h2>
-      <ul class="task-list" id="taskList">
+    <p class="section-label">Responsibilities</p>
+    <h2 class="section-heading">What I Did</h2>
+    <ul class="task-list" id="taskList">
         <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
+        TODO: Replace each <li> with your actual tasks.
+        Keep them specific and action-oriented.
+        Add or remove items as needed.
         -->
         <li>
             <span class="task-num">01</span>
@@ -154,118 +154,118 @@
             <span class="task-num">05</span>
             <span>Directed a team of 3 artists to produce cohesive character, environment, UI, and VFX assets aligned with a unified artistic vision</span>
         </li>
-      </ul>
+    </ul>
     </div>
 
     <!-- GAMEPLAY VIDEO -->
     <!--
     <div class="video-section">
-      <p class="section-label">Gameplay</p>
-      <h2 class="section-heading">Video</h2>
-      <div class="video-wrap">
-          TODO: TO EMBED A YOUTUBE VIDEO:
-          Replace the placeholder div below with:
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+    <p class="section-label">Gameplay</p>
+    <h2 class="section-heading">Video</h2>
+    <div class="video-wrap">
+        TODO: TO EMBED A YOUTUBE VIDEO:
+        Replace the placeholder div below with:
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
-          TO EMBED A VIMEO VIDEO:
-          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen></iframe>
+        TO EMBED A VIMEO VIDEO:
+        <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
         <div class="video-placeholder">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          <p>Add your gameplay video URL above</p>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        <p>Add your gameplay video URL above</p>
         </div>
-      </div>
+    </div>
     </div>
     -->
 
-  </main>
+</main>
 
-  <!-- RIGHT SIDEBAR -->
-  <aside class="sidebar">
+<!-- RIGHT SIDEBAR -->
+<aside class="sidebar">
     <div class="meta-card">
-      <div class="meta-title">Project Info</div>
+    <div class="meta-title">Project Info</div>
 
-      <!-- TODO: Edit each meta-val with your project's details -->
-      <div class="meta-row">
+    <!-- TODO: Edit each meta-val with your project's details -->
+    <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Software</span>
         <span class="meta-val">Unity 6</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Duration</span>
         <span class="meta-val">48 Hours</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Team Size</span>
         <span class="meta-val">10</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">My Role</span>
         <span class="meta-val">Team Lead &amp; Game Designer</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Status</span>
         <span class="meta-val">Prototype</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
-          <!-- Add or remove tags to match your project -->
-          <span class="tag">Level Design</span>
-          <span class="tag">System Design</span>
-          <span class="tag">Artistic Direction</span>
-          <span class="tag">Team Management</span>
+        <!-- Add or remove tags to match your project -->
+        <span class="tag">Level Design</span>
+        <span class="tag">System Design</span>
+        <span class="tag">Artistic Direction</span>
+        <span class="tag">Team Management</span>
         </div>
-      </div>
+    </div>
 
-      <!-- Optional links — remove any you don't need -->
-      <div class="meta-links">
+    <!-- Optional links — remove any you don't need -->
+    <div class="meta-links">
         <a href="https://sel-fie.itch.io/malefica" class="btn primary">
-          Download
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
         <!-- <a href="#" class="btn">
-          View on GitHub
-          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        View on GitHub
+        <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         </a> -->
-      </div>
     </div>
-  </aside>
+    </div>
+</aside>
 
 </div>
 
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
-  <!-- Update href, eyebrow, and title for the next project page -->
-  <a href="physics-sim.html" class="next-project-link">
+<!-- Update href, eyebrow, and title for the next project page -->
+<a href="physics-sim.html" class="next-project-link">
     <div>
-      <p class="next-label">Next Project</p>
-      <p class="next-title">Pinball<br>Physics Simulator</p>
+    <p class="next-label">Next Project</p>
+    <p class="next-title">Pinball<br>Physics Simulator</p>
     </div>
     <div class="next-arrow">
-      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
     </div>
-  </a>
+</a>
 </div>
 
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
-  <div class="footer-socials">
+<div class="footer-socials">
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -286,16 +286,16 @@
 </footer>
 
 <script>
-  // ── SLIDESHOW ──
-  const mainEl = document.getElementById('slideMain');
-  const slides = Array.from(mainEl.children);
-  const counter = document.getElementById('slideCounter');
-  const dotsEl  = document.getElementById('slideDots');
-  const thumbsEl = document.getElementById('slideThumbs');
-  let current = 0;
+// ── SLIDESHOW ──
+const mainEl = document.getElementById('slideMain');
+const slides = Array.from(mainEl.children);
+const counter = document.getElementById('slideCounter');
+const dotsEl  = document.getElementById('slideDots');
+const thumbsEl = document.getElementById('slideThumbs');
+let current = 0;
 
-  // Build dots and thumbnails from whatever slides exist
-  slides.forEach((slide, i) => {
+// Build dots and thumbnails from whatever slides exist
+slides.forEach((slide, i) => {
     // Dot
     const dot = document.createElement('button');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -310,19 +310,19 @@
     // If the slide has an img child, clone it for the thumb
     const img = slide.tagName === 'IMG' ? slide : slide.querySelector('img');
     if (img) {
-      const tImg = document.createElement('img');
-      tImg.src = img.src;
-      tImg.alt = img.alt || '';
-      thumb.appendChild(tImg);
+    const tImg = document.createElement('img');
+    tImg.src = img.src;
+    tImg.alt = img.alt || '';
+    thumb.appendChild(tImg);
     } else {
-      thumb.textContent = i + 1;
+    thumb.textContent = i + 1;
     }
 
     thumb.addEventListener('click', () => goTo(i));
     thumbsEl.appendChild(thumb);
-  });
+});
 
-  function goTo(n) {
+function goTo(n) {
     slides[current].style.display = 'none';
     document.querySelectorAll('.dot')[current].classList.remove('active');
     document.querySelectorAll('.thumb')[current].classList.remove('active');
@@ -336,26 +336,26 @@
 
     // Scroll thumb into view
     document.querySelectorAll('.thumb')[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
+}
 
-  // Hide all but first on init
-  slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
-  counter.textContent = '1 / ' + slides.length;
+// Hide all but first on init
+slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
+counter.textContent = '1 / ' + slides.length;
 
-  document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
+// Keyboard navigation
+document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
-  });
+});
 
-  // Auto-number task list items
-  const tasks = document.querySelectorAll('#taskList .task-num');
-  tasks.forEach((el, i) => {
+// Auto-number task list items
+const tasks = document.querySelectorAll('#taskList .task-num');
+tasks.forEach((el, i) => {
     el.textContent = String(i + 1).padStart(2, '0');
-  });
+});
 </script>
 
 </body>

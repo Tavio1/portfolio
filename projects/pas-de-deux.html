@@ -10,305 +10,305 @@
 <link rel="stylesheet" href="../styles/project.css" />
 
 <style>  
-  .hero-bg {
+.hero-bg {
     background-image: url('../assets/pas-de-deux/splash-notext.png');
     background-size: cover;
     background-position: center; 
-  }
+}
 </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
 <nav>
-  <!-- Update href to point to your homepage file -->
-  <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
-  <ul class="nav-links">
+<!-- Update href to point to your homepage file -->
+<a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
+<ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="../index.html#portfolio">Portfolio</a></li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../index.html#contact">Contact</a></li>
-  </ul>
+</ul>
 </nav>
 
 <!-- ── HERO ── -->
 <header class="project-hero">
-  <!-- TO ADD YOUR OWN HERO IMAGE:
-       Add to .hero-bg style: background-image: url('your-project-hero.jpg');
-  -->
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="project-hero-content">
+<!-- TO ADD YOUR OWN HERO IMAGE:
+    Add to .hero-bg style: background-image: url('your-project-hero.jpg');
+-->
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="project-hero-content">
     <h1 class="project-title">Pas de deux</h1>
     <span class="project-eyebrow">PC · Unity 6 · 2025</span>
     <a href="../index.html#portfolio" class="back-link">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         All Projects
     </a>
-  </div>
+</div>
 </header>
 
 <!-- ── MAIN CONTENT ── -->
 <div class="project-body">
 
-  <!-- LEFT COLUMN -->
-  <main>
+<!-- LEFT COLUMN -->
+<main>
 
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
-      <div class="slide-main" id="slideMain">
+    <div class="slide-main" id="slideMain">
         <!--
-          INSTRUCTIONS — Images slideshow:
-          Replace the placeholder divs below with <img> tags for each screenshot.
-          The JS reads all children of #slideMain — swap in real images like:
-          <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
-          <img src="screenshot-2.jpg" alt="AI behaviour tree" />
-          etc.
-          Only the active slide is shown; the rest are hidden by JS.
+        INSTRUCTIONS — Images slideshow:
+        Replace the placeholder divs below with <img> tags for each screenshot.
+        The JS reads all children of #slideMain — swap in real images like:
+        <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
+        <img src="screenshot-2.jpg" alt="AI behaviour tree" />
+        etc.
+        Only the active slide is shown; the rest are hidden by JS.
         -->
         <img src="../assets/pas-de-deux/Gameplay_High_Quality.gif" alt="Gameplay GIF 1" />
         <img src="../assets/pas-de-deux/Menu_High_Quality.gif" alt="Main Menu GIF" />
         <img src="../assets/pas-de-deux/Hit_High_Quality.gif" alt="Gameplay GIF 2" />
         <img src="../assets/pas-de-deux/Chaos_High_Quality.gif" alt="Gameplay GIF 3" />
-      </div>
+    </div>
 
-      <div class="slide-controls">
+    <div class="slide-controls">
         <button class="slide-btn" id="prevBtn" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
         </button>
         <button class="slide-btn" id="nextBtn" aria-label="Next slide" style="border-right:none;border-left:1px solid var(--border);">
-          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </button>
         <span class="slide-counter" id="slideCounter">1 / 5</span>
         <div class="slide-dots" id="slideDots"></div>
-      </div>
+    </div>
 
-      <div class="slide-thumbs" id="slideThumbs"></div>
+    <div class="slide-thumbs" id="slideThumbs"></div>
     </div>
 
     <!-- OVERVIEW -->
     <div class="content-section">
-      <p class="section-label">Overview</p>
-      <!-- TODO: Replace "the Project" with project name -->
-      <h2 class="section-heading">About Pas de Deux</h2>
-      <div class="overview-text">
+    <p class="section-label">Overview</p>
+    <!-- TODO: Replace "the Project" with project name -->
+    <h2 class="section-heading">About Pas de Deux</h2>
+    <div class="overview-text">
         <!--
-          TODO: Replace this text with your own project overview.
-          Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
+        TODO: Replace this text with your own project overview.
+        Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
         -->
         <p>
-          Pas de Deux is a silly cooperative rhythm game with a less-than-graceful 
-          ballerina, quite an unruly audience, and a set that could go up in flames at 
-          any minute! Two players must work together, each controlling one half of
-          the ballerina whilst trying to keep the audience entertained.
+        Pas de Deux is a silly cooperative rhythm game with a less-than-graceful 
+        ballerina, quite an unruly audience, and a set that could go up in flames at 
+        any minute! Two players must work together, each controlling one half of
+        the ballerina whilst trying to keep the audience entertained.
         </p>
         <p> 
-          This game was made over the course of 10 weeks as the McGill University 
-          submission for the 2025 edition of the Ubisoft Game Lab Competition. 
-          Our team consisted of myself as the designer, three artists, and four 
-          programmers and we had to create a game under the design and theme constraints
-          of the competition. Out of 26 competing games, we <strong>won the Jury's 
-          Choice Award</strong> for creating the most fun and enjoyable game.
+        This game was made over the course of 10 weeks as the McGill University 
+        submission for the 2025 edition of the Ubisoft Game Lab Competition. 
+        Our team consisted of myself as the designer, three artists, and four 
+        programmers and we had to create a game under the design and theme constraints
+        of the competition. Out of 26 competing games, we <strong>won the Jury's 
+        Choice Award</strong> for creating the most fun and enjoyable game.
         </p>
-      </div>
+    </div>
     </div>
 
     <!-- TASKS / RESPONSIBILITIES -->
     <div class="content-section">
-      <p class="section-label">Responsibilities</p>
-      <h2 class="section-heading">Designer Tasks</h2>
-      <ul class="task-list" id="taskList">
+    <p class="section-label">Responsibilities</p>
+    <h2 class="section-heading">Designer Tasks</h2>
+    <ul class="task-list" id="taskList">
         <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
+        TODO: Replace each <li> with your actual tasks.
+        Keep them specific and action-oriented.
+        Add or remove items as needed.
         -->
         <li>
-          <span class="task-num">01</span>
-          <span>Designed the core game loop, the controls, and the split co-op mechanics</span>
+        <span class="task-num">01</span>
+        <span>Designed the core game loop, the controls, and the split co-op mechanics</span>
         </li>
         <li>
-          <span class="task-num">02</span>
-          <span>Worked with artists to define the artistic direction of the game and UI</span>
+        <span class="task-num">02</span>
+        <span>Worked with artists to define the artistic direction of the game and UI</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Ran public playtests and utilized feedback to iterate on UX and balance</span>
+        <span class="task-num">03</span>
+        <span>Ran public playtests and utilized feedback to iterate on UX and balance</span>
         </li>
         <li>
-          <span class="task-num">04</span>
-          <span>Developed significant amounts of documentation in the form of formal design documents, spreadsheets, and vision boards</span>
+        <span class="task-num">04</span>
+        <span>Developed significant amounts of documentation in the form of formal design documents, spreadsheets, and vision boards</span>
         </li>
         <li>
-          <span class="task-num">05</span>
-          <span>Created unique theming, visuals, lighting, and level designs for 5 different playable songs</span>
+        <span class="task-num">05</span>
+        <span>Created unique theming, visuals, lighting, and level designs for 5 different playable songs</span>
         </li>
         <li>
-          <span class="task-num">06</span>
-          <span>Designed the rhythm and input management systems and collaborated with programmers to implement it</span>
+        <span class="task-num">06</span>
+        <span>Designed the rhythm and input management systems and collaborated with programmers to implement it</span>
         </li>
         <li>
-          <span class="task-num">07</span>
-          <span>Drew wireframes of HUD in Procreate and made UI mockups in Figma and iterated on designs extensively to ensure good flow and feel for players</span>
+        <span class="task-num">07</span>
+        <span>Drew wireframes of HUD in Procreate and made UI mockups in Figma and iterated on designs extensively to ensure good flow and feel for players</span>
         </li>
 
-      </ul>
-      
-      <h2 class="section-heading" style="margin-top:1rem">Programmer Tasks</h2>
-      <ul class="task-list" id="taskList">
+    </ul>
+    
+    <h2 class="section-heading" style="margin-top:1rem">Programmer Tasks</h2>
+    <ul class="task-list" id="taskList">
         <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
+        TODO: Replace each <li> with your actual tasks.
+        Keep them specific and action-oriented.
+        Add or remove items as needed.
         -->
         <li>
-          <span class="task-num">01</span>
-          <span>Created technical diagrams outlining the software architecture for the gameplay mechanics and how the input, object, and point system must work together</span>
+        <span class="task-num">01</span>
+        <span>Created technical diagrams outlining the software architecture for the gameplay mechanics and how the input, object, and point system must work together</span>
         </li>
         <li>
-          <span class="task-num">02</span>
-          <span>Merged all individual systems developed by programmers together, adjusting code and fixing merge conflicts</span>
+        <span class="task-num">02</span>
+        <span>Merged all individual systems developed by programmers together, adjusting code and fixing merge conflicts</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Delved into code to fix bugs and refine implementations of mechanics, tools, and UI</span>
+        <span class="task-num">03</span>
+        <span>Delved into code to fix bugs and refine implementations of mechanics, tools, and UI</span>
         </li>
-      </ul>
-      
-      <h2 class="section-heading" style="margin-top:1rem">Management Tasks</h2>
-      <ul class="task-list" id="taskList">
+    </ul>
+    
+    <h2 class="section-heading" style="margin-top:1rem">Management Tasks</h2>
+    <ul class="task-list" id="taskList">
         <!--
-          TODO: Replace each <li> with your actual tasks.
-          Keep them specific and action-oriented.
-          Add or remove items as needed.
+        TODO: Replace each <li> with your actual tasks.
+        Keep them specific and action-oriented.
+        Add or remove items as needed.
         -->
         <li>
-          <span class="task-num">01</span>
-          <span>Created a production schedule using Agile methodologies and ensured deadlines were met, while continually adjusting the schedule and development plan when delays occurred</span>
+        <span class="task-num">01</span>
+        <span>Created a production schedule using Agile methodologies and ensured deadlines were met, while continually adjusting the schedule and development plan when delays occurred</span>
         </li>
         <li>
-          <span class="task-num">02</span>
-          <span>Ran weekly scrum-style team meetings to plan sprints, organize tasks, and solve any issues</span>
+        <span class="task-num">02</span>
+        <span>Ran weekly scrum-style team meetings to plan sprints, organize tasks, and solve any issues</span>
         </li>
         <li>
-          <span class="task-num">03</span>
-          <span>Gained experience with the entire cycle of game development, from pre-production all the way to gold master</span>
+        <span class="task-num">03</span>
+        <span>Gained experience with the entire cycle of game development, from pre-production all the way to gold master</span>
         </li>
-      </ul>
+    </ul>
     </div>
 
     <!-- GAMEPLAY VIDEO -->
     <div class="video-section">
-      <p class="section-label">Gameplay</p>
-      <h2 class="section-heading">Video</h2>
-      <div class="video-wrap">
+    <p class="section-label">Gameplay</p>
+    <h2 class="section-heading">Video</h2>
+    <div class="video-wrap">
         <!--
-          TODO: TO EMBED A YOUTUBE VIDEO:
-          Replace the placeholder div below with:
-          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+        TODO: TO EMBED A YOUTUBE VIDEO:
+        Replace the placeholder div below with:
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
 
-          TO EMBED A VIMEO VIDEO:
-          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                  title="Gameplay video"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen></iframe>
+        TO EMBED A VIMEO VIDEO:
+        <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
+                title="Gameplay video"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen></iframe>
         -->
         <iframe src="https://www.youtube.com/embed/AfeR549AGZc"
-                  title="Gameplay video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
+                title="Gameplay video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
         </iframe>
-      </div>
+    </div>
     </div>
 
-  </main>
+</main>
 
-  <!-- RIGHT SIDEBAR -->
-  <aside class="sidebar">
+<!-- RIGHT SIDEBAR -->
+<aside class="sidebar">
     <div class="meta-card">
-      <div class="meta-title">Project Info</div>
+    <div class="meta-title">Project Info</div>
 
-      <!-- TODO: Edit each meta-val with your project's details -->
-      <div class="meta-row">
+    <!-- TODO: Edit each meta-val with your project's details -->
+    <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Software</span>
         <span class="meta-val">Unity 6, Miro</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Duration</span>
         <span class="meta-val">3 Months</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Team Size</span>
         <span class="meta-val">8</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">My Role</span>
         <span class="meta-val">Team Lead, Game Designer &amp; Programmer</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Status</span>
         <span class="meta-val">Shipped</span>
-      </div>
+    </div>
 
-      <div class="meta-row">
+    <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
-          <!-- Add or remove tags to match your project -->
-          <span class="tag">C#</span>
-          <span class="tag">Gameplay Design</span>
-          <span class="tag">Agile</span>
-          <span class="tag">Systems Design</span>
-          <span class="tag">Balance</span>
+        <!-- Add or remove tags to match your project -->
+        <span class="tag">C#</span>
+        <span class="tag">Gameplay Design</span>
+        <span class="tag">Agile</span>
+        <span class="tag">Systems Design</span>
+        <span class="tag">Balance</span>
 
         </div>
-      </div>
+    </div>
 
-      <!-- Optional links — remove any you don't need -->
-      <div class="meta-links">
+    <!-- Optional links — remove any you don't need -->
+    <div class="meta-links">
         <a href="https://typh0n4.itch.io/pas-de-deux-the-chaos-ballet" class="btn primary">
-          Download
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </a>
         <a href="https://drive.google.com/drive/folders/1mmcNEUshgg3Ct4t-CtTsMKCkwl1pxt2J?usp=drive_link" class="btn">
-          See Documentation
-          <svg viewBox="0 0 24 24"><path d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3"/></svg>
+        See Documentation
+        <svg viewBox="0 0 24 24"><path d="M19 9V17.8C19 18.9201 19 19.4802 18.782 19.908C18.5903 20.2843 18.2843 20.5903 17.908 20.782C17.4802 21 16.9201 21 15.8 21H8.2C7.07989 21 6.51984 21 6.09202 20.782C5.71569 20.5903 5.40973 20.2843 5.21799 19.908C5 19.4802 5 18.9201 5 17.8V6.2C5 5.07989 5 4.51984 5.21799 4.09202C5.40973 3.71569 5.71569 3.40973 6.09202 3.21799C6.51984 3 7.0799 3 8.2 3H13M19 9L13 3M19 9H14C13.4477 9 13 8.55228 13 8V3"/></svg>
         </a>
-      </div>
     </div>
-  </aside>
+    </div>
+</aside>
 
 </div>
 
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
-  <!-- Update href, eyebrow, and title for the next project page -->
-  <a href="perfect-storm.html" class="next-project-link">
+<!-- Update href, eyebrow, and title for the next project page -->
+<a href="perfect-storm.html" class="next-project-link">
     <div>
-      <p class="next-label">Next Project</p>
-      <p class="next-title">Perfect Storm</p>
+    <p class="next-label">Next Project</p>
+    <p class="next-title">Perfect Storm</p>
     </div>
     <div class="next-arrow">
-      <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
     </div>
-  </a>
+</a>
 </div>
 
 <!-- ── FOOTER ── -->
 <footer>
     <div class="footer-copy-div"><p class="footer-copy">© 2026 Ottavio Ficaccio. All rights reserved.</p></div>
-  <div class="footer-socials">
+<div class="footer-socials">
         <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tavio-ficaccio/" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -329,16 +329,16 @@
 </footer>
 
 <script>
-  // ── SLIDESHOW ──
-  const mainEl = document.getElementById('slideMain');
-  const slides = Array.from(mainEl.children);
-  const counter = document.getElementById('slideCounter');
-  const dotsEl  = document.getElementById('slideDots');
-  const thumbsEl = document.getElementById('slideThumbs');
-  let current = 0;
+// ── SLIDESHOW ──
+const mainEl = document.getElementById('slideMain');
+const slides = Array.from(mainEl.children);
+const counter = document.getElementById('slideCounter');
+const dotsEl  = document.getElementById('slideDots');
+const thumbsEl = document.getElementById('slideThumbs');
+let current = 0;
 
-  // Build dots and thumbnails from whatever slides exist
-  slides.forEach((slide, i) => {
+// Build dots and thumbnails from whatever slides exist
+slides.forEach((slide, i) => {
     // Dot
     const dot = document.createElement('button');
     dot.className = 'dot' + (i === 0 ? ' active' : '');
@@ -353,19 +353,19 @@
     // If the slide has an img child, clone it for the thumb
     const img = slide.tagName === 'IMG' ? slide : slide.querySelector('img');
     if (img) {
-      const tImg = document.createElement('img');
-      tImg.src = img.src;
-      tImg.alt = img.alt || '';
-      thumb.appendChild(tImg);
+    const tImg = document.createElement('img');
+    tImg.src = img.src;
+    tImg.alt = img.alt || '';
+    thumb.appendChild(tImg);
     } else {
-      thumb.textContent = i + 1;
+    thumb.textContent = i + 1;
     }
 
     thumb.addEventListener('click', () => goTo(i));
     thumbsEl.appendChild(thumb);
-  });
+});
 
-  function goTo(n) {
+function goTo(n) {
     slides[current].style.display = 'none';
     document.querySelectorAll('.dot')[current].classList.remove('active');
     document.querySelectorAll('.thumb')[current].classList.remove('active');
@@ -379,26 +379,26 @@
 
     // Scroll thumb into view
     document.querySelectorAll('.thumb')[current].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-  }
+}
 
-  // Hide all but first on init
-  slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
-  counter.textContent = '1 / ' + slides.length;
+// Hide all but first on init
+slides.forEach((s, i) => { if (i !== 0) s.style.display = 'none'; });
+counter.textContent = '1 / ' + slides.length;
 
-  document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
 
-  // Keyboard navigation
-  document.addEventListener('keydown', e => {
+// Keyboard navigation
+document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
-  });
+});
 
-  // Auto-number task list items
-  // const tasks = document.querySelectorAll('#taskList .task-num');
-  // tasks.forEach((el, i) => {
-  //   el.textContent = String(i + 1).padStart(2, '0');
-  // });
+// Auto-number task list items
+// const tasks = document.querySelectorAll('#taskList .task-num');
+// tasks.forEach((el, i) => {
+//   el.textContent = String(i + 1).padStart(2, '0');
+// });
 </script>
 
 </body>
