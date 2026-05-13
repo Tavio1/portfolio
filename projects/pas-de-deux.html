@@ -21,7 +21,6 @@
 
 <!-- ── NAV ── -->
 <nav>
-<!-- Update href to point to your homepage file -->
 <a href="../index.html" class="nav-logo">OTTAVIO FICACCIO</a>
 <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
@@ -33,9 +32,6 @@
 
 <!-- ── HERO ── -->
 <header class="project-hero">
-<!-- TO ADD YOUR OWN HERO IMAGE:
-    Add to .hero-bg style: background-image: url('your-project-hero.jpg');
--->
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>
 <div class="project-hero-content">
@@ -57,15 +53,6 @@
     <!-- SLIDESHOW -->
     <div class="slideshow" id="slideshow">
     <div class="slide-main" id="slideMain">
-        <!--
-        INSTRUCTIONS — Images slideshow:
-        Replace the placeholder divs below with <img> tags for each screenshot.
-        The JS reads all children of #slideMain — swap in real images like:
-        <img src="screenshot-1.jpg" alt="Gameplay screenshot 1" />
-        <img src="screenshot-2.jpg" alt="AI behaviour tree" />
-        etc.
-        Only the active slide is shown; the rest are hidden by JS.
-        -->
         <img src="../assets/pas-de-deux/Gameplay_High_Quality.gif" alt="Gameplay GIF 1" />
         <img src="../assets/pas-de-deux/Menu_High_Quality.gif" alt="Main Menu GIF" />
         <img src="../assets/pas-de-deux/Hit_High_Quality.gif" alt="Gameplay GIF 2" />
@@ -89,13 +76,8 @@
     <!-- OVERVIEW -->
     <div class="content-section">
     <p class="section-label">Overview</p>
-    <!-- TODO: Replace "the Project" with project name -->
     <h2 class="section-heading">About Pas de Deux</h2>
     <div class="overview-text">
-        <!--
-        TODO: Replace this text with your own project overview.
-        Describe: what the game is, your goals, the context (jam, solo, team, class), and any key challenges.
-        -->
         <p>
         Pas de Deux is a silly cooperative rhythm game with a less-than-graceful 
         ballerina, quite an unruly audience, and a set that could go up in flames at 
@@ -118,11 +100,6 @@
     <p class="section-label">Responsibilities</p>
     <h2 class="section-heading">Designer Tasks</h2>
     <ul class="task-list" id="taskList">
-        <!--
-        TODO: Replace each <li> with your actual tasks.
-        Keep them specific and action-oriented.
-        Add or remove items as needed.
-        -->
         <li>
         <span class="task-num">01</span>
         <span>Designed the core game loop, the controls, and the split co-op mechanics</span>
@@ -156,11 +133,6 @@
     
     <h2 class="section-heading" style="margin-top:1rem">Programmer Tasks</h2>
     <ul class="task-list" id="taskList">
-        <!--
-        TODO: Replace each <li> with your actual tasks.
-        Keep them specific and action-oriented.
-        Add or remove items as needed.
-        -->
         <li>
         <span class="task-num">01</span>
         <span>Created technical diagrams outlining the software architecture for the gameplay mechanics and how the input, object, and point system must work together</span>
@@ -177,11 +149,6 @@
     
     <h2 class="section-heading" style="margin-top:1rem">Management Tasks</h2>
     <ul class="task-list" id="taskList">
-        <!--
-        TODO: Replace each <li> with your actual tasks.
-        Keep them specific and action-oriented.
-        Add or remove items as needed.
-        -->
         <li>
         <span class="task-num">01</span>
         <span>Created a production schedule using Agile methodologies and ensured deadlines were met, while continually adjusting the schedule and development plan when delays occurred</span>
@@ -202,20 +169,6 @@
     <p class="section-label">Gameplay</p>
     <h2 class="section-heading">Video</h2>
     <div class="video-wrap">
-        <!--
-        TODO: TO EMBED A YOUTUBE VIDEO:
-        Replace the placeholder div below with:
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                title="Gameplay video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-
-        TO EMBED A VIMEO VIDEO:
-        <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID"
-                title="Gameplay video"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen></iframe>
-        -->
         <iframe src="https://www.youtube.com/embed/AfeR549AGZc"
                 title="Gameplay video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -231,7 +184,6 @@
     <div class="meta-card">
     <div class="meta-title">Project Info</div>
 
-    <!-- TODO: Edit each meta-val with your project's details -->
     <div class="meta-row">
         <span class="meta-key">Platform</span>
         <span class="meta-val">PC</span>
@@ -265,7 +217,7 @@
     <div class="meta-row">
         <span class="meta-key">Skills Used</span>
         <div class="meta-tags">
-        <!-- Add or remove tags to match your project -->
+
         <span class="tag">C#</span>
         <span class="tag">Gameplay Design</span>
         <span class="tag">Agile</span>
@@ -293,7 +245,6 @@
 
 <!-- ── NEXT PROJECT ── -->
 <div class="next-project">
-<!-- Update href, eyebrow, and title for the next project page -->
 <a href="perfect-storm.html" class="next-project-link">
     <div>
     <p class="next-label">Next Project</p>
@@ -393,12 +344,6 @@ document.addEventListener('keydown', e => {
     if (e.key === 'ArrowLeft')  goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
 });
-
-// Auto-number task list items
-// const tasks = document.querySelectorAll('#taskList .task-num');
-// tasks.forEach((el, i) => {
-//   el.textContent = String(i + 1).padStart(2, '0');
-// });
 </script>
 
 </body>
