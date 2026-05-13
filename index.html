@@ -273,6 +273,11 @@
         color: var(--off-white);
     }
 
+    .filter-btn:disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+
   .portfolio-footer {
     display: flex;
     align-items: flex-end;
@@ -303,34 +308,6 @@
     background: var(--black);
   }
 
-  .project-grid-extra {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1px;
-    background: transparent;
-    max-height: 0;
-    overflow: hidden;
-    margin-top: 0;
-    transition: max-height 0.6s ease, margin-top 0.6s ease, background 0.6s ease;
-  }
-
-  .project-grid-extra.visible {
-    max-height: 2000px;
-    margin-top: 1px;
-    background: var(--black);
-  }
-
-  .project-grid-extra .project-card {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-  }
-
-  .project-grid-extra.visible .project-card {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
   /* Featured (large) card */
   .project-card {
     background: var(--black);
@@ -341,7 +318,18 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    transition: background 0.3s;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+
+  .project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .project-card.displaynone {
+    display: none;
   }
 
   .project-card:hover { background: #111; }
@@ -349,15 +337,6 @@
   .project-card.featured { grid-column: span 7; min-height: 520px; }
   .project-card.medium   { grid-column: span 5; min-height: 520px; }
   .project-card.small    { grid-column: span 4; min-height: 320px; }
-
-  
-  .project-card.hidden {
-    display: none;
-  }
-
-  .project-card.clamped {
-    display: none;
-  }
 
   .card-img {
     width: 100%;
@@ -531,6 +510,11 @@
   .btn:hover {
     background: var(--accent);
     border-color: var(--accent);
+  }
+
+  .btn:disabled {
+    pointer-events: none;
+    cursor: default;
   }
 
   .btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
@@ -1102,184 +1086,168 @@
   updateNav(); // run once on load
 </script>
 
-<script> 
-    const filterProgramming = document.getElementById('filterProgramming');
-    const filterDesign = document.getElementById('filterDesign');
-    const filterViewAll = document.getElementById('viewAllBtn');
+<script>
     const allCards = document.querySelectorAll('.project-card');
+    const filterProg = document.getElementById('filterProgramming');
+    const filterDes = document.getElementById('filterDesign');
+    const viewAllBtn = document.getElementById('viewAllBtn');
 
-    let programmingActive = false;
-    let designActive = false;
-    let viewAll = false;
+    // Starting values of all toggles
+    var progToggled = false;
+    var desToggled = false;
+    var viewAll = false;
 
-    function applyFilters() {
-        var count = 0;
-        //var shouldShowBtn = viewAll;
+    function updateFilter() {
+        var showDes = desToggled;
+        var showProg = progToggled;
+
+        // If neither filter is enabled, default to showing everything
+        if (showDes == false && showProg == false) {
+            showDes = true;
+            showProg = true;
+        }
+
+        // Set isHidden property for each card based on filtering
         allCards.forEach(card => {
             const specialty = card.dataset.specialty;
-            var showProgramming = programmingActive && (specialty === 'programming' || specialty === 'both');
-            var showDesign = designActive && (specialty === 'design' || specialty === 'both');
-            const showTop5 = viewAll || (count < 5);
+            const cardIsVisibleProg = showProg && (specialty === 'programming' || specialty === 'both');
+            const cardIsVisibleDes = showDes && (specialty === 'design' || specialty === 'both');
 
-            // If nothing is selected show everything
-            if (!programmingActive && !designActive) {
-                showProgramming = true;
-                showDesign = true;
-            }
+            if (cardIsVisibleProg || cardIsVisibleDes)
+                card.dataset.isHidden = 'false';
+            else
+                card.dataset.isHidden = 'true';
+        })
+    }
 
-            if ((showProgramming || showDesign)) {
-                card.classList.remove('hidden');
-                count++;
-                if (!showTop5) {
-                    card.classList.add('clamped');
+    function updateViewAll() {
+        // Remove isClamped for all cards
+        allCards.forEach(card => {
+            card.dataset.isClamped = 'false';
+        })
+
+        // If not view all, set isClamped for post-filter cards not in the top 5
+        if (!viewAll) {
+            const cardsPostFilter = Array.from(document.querySelectorAll('.project-card')).filter(card => card.dataset.isHidden !== 'true');
+            var counter = 0;
+            cardsPostFilter.forEach(card => {
+                if (counter < 5) {
+                    card.dataset.isClamped = 'false';
                 }
                 else {
-                    card.classList.remove('clamped');
+                    card.dataset.isClamped = 'true';
                 }
-            } else {
-                card.classList.add('hidden');
-                card.classList.remove('clamped');
-                //if (showProgramming || showDesign) shouldShowBtn = true;
-            }
-
-        });
-
-        // Hide the button if clicking it wouldn't do anything
-        const clampedCardsCount = Array.from(document.querySelectorAll('.project-card.clamped')).length;
-        const visibleCardsCount = Array.from(document.querySelectorAll('.project-card:not(.hidden, .clamped)')).length;
+                counter++;
+            });
+        }
+        
+        // Hide 'View All' button if clicking it wouldn't do anything
+        const clampedCardsCount = Array.from(document.querySelectorAll('.project-card')).filter(card => card.dataset.isClamped === 'true').length;
+        const visibleCardsCount = Array.from(document.querySelectorAll('.project-card')).filter(card => card.dataset.isHidden !== 'true' && card.dataset.isClamped !== 'true').length;
         const shouldShowBtn = clampedCardsCount > 0 || visibleCardsCount > 5;
         viewAllBtn.style.display = shouldShowBtn ? 'inline-block' : 'none';
     }
 
-    filterProgramming.addEventListener('click', () => {
-        programmingActive = !programmingActive;
-        filterProgramming.classList.toggle('inactive', !programmingActive);
-        applyFilters();
+    function updateGrid(removeAll) {
+        // Disable buttons
+        filterProg.disabled = true;
+        filterDes.disabled = true;
+        viewAllBtn.disabled = true
+
+        if (removeAll) {
+            allCards.forEach(card => {
+                card.style.transitionDelay = '0s';
+                card.classList.remove('visible');
+            });
+        }
+
+        setTimeout(function (){
+            if (removeAll) {
+                allCards.forEach(card => {
+                    card.classList.add('displaynone');
+                });
+            }
+            
+            updateFilter();
+            updateViewAll();
+            displayCards();
+        }, removeAll ? 400 : 0);
+    }
+
+    function displayCards() {
+
+        const cardsToHide = Array.from(document.querySelectorAll('.project-card')).filter(card => (card.dataset.isHidden === 'true' || card.dataset.isClamped === 'true') && !card.classList.contains('displaynone'));
+        const isCardsToHide = cardsToHide.length > 0;
+        if (isCardsToHide) {
+            cardsToHide.forEach(card => {
+                card.style.transitionDelay = '0s';
+                card.classList.remove('visible');
+            });
+        }
+
+        setTimeout(function (){
+            if (isCardsToHide) {
+                cardsToHide.forEach(card => {
+                    card.classList.add('displaynone');
+                });
+            }
+            
+            const cardsToLoad = Array.from(document.querySelectorAll('.project-card')).filter(card => (card.dataset.isHidden !== 'true' && card.dataset.isClamped !== 'true') && !card.classList.contains('visible'));
+
+
+            cardsToLoad.forEach(card => {
+                card.classList.remove('displaynone');
+                card.classList.remove('visible');
+            })
+
+            var counter = 0;
+
+            // Force the browser to register the removed state before re-adding visible
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    cardsToLoad.forEach((card, index) => {
+                        card.style.transitionDelay = `${index * 0.08}s`;
+                        card.classList.add('visible');
+                    });
+                });
+            });
+            
+            filterProg.disabled = false;
+            filterDes.disabled = false;
+            viewAllBtn.disabled = false;
+        }, isCardsToHide ? 400: 0);
+
+    }
+
+    // Set programming filter events
+    filterProg.addEventListener('click', () => {
+        progToggled = !progToggled;
+        filterProgramming.classList.toggle('inactive', !progToggled);
+
+        updateGrid(true);
     });
 
-    filterDesign.addEventListener('click', () => {
-        designActive = !designActive;
-        filterDesign.classList.toggle('inactive', !designActive);
-        applyFilters();
+    // Set design filter events
+    filterDes.addEventListener('click', () => {
+        desToggled = !desToggled;
+        filterDesign.classList.toggle('inactive', !desToggled);
+        
+        updateGrid(true);
     });
 
-    filterViewAll.addEventListener('click', function(e) {
+    // Set view all button events
+    viewAllBtn.addEventListener('click', function(e) {
         e.preventDefault();
         viewAll = !viewAll;
         viewAllBtn.textContent = viewAll ? 'Show less ↑' : 'View all projects ↓';
-        applyFilters();
+
+        updateGrid(false);
     });
 
-    // Run on load so filtering and clamping are both applied before first paint
-    applyFilters();
+    // Update grid on startup
+    updateGrid(true);
+
 </script>
-
-<!-- <script>
-    const viewAllBtn = document.getElementById('viewAllBtn');
-    const extraProjects = document.getElementById('extraProjects');
-    const extraCards = extraProjects.querySelectorAll('.project-card');
-
-    viewAllBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        const isVisible = extraProjects.classList.toggle('visible');
-        viewAllBtn.textContent = isVisible ? 'Show less ↑' : 'View all projects ↓';
-
-        if (isVisible) {
-            // Stagger each card's fade-in slightly after the previous one
-            extraCards.forEach((card, i) => {
-                card.style.transitionDelay = `${0.2 + i * 0.08}s`;
-            });
-        } else {
-            // Remove delays immediately on collapse so cards don't linger
-            extraCards.forEach(card => {
-                card.style.transitionDelay = '0s';
-            });
-        }
-    });
-</script> -->
-
-<!-- <script>
-  const viewAllBtn = document.getElementById('viewAllBtn');
-  let allVisible = false;
-
-  function applyVisibility() {
-    const visibleCards = Array.from(document.querySelectorAll('.project-card:not(.hidden)'));
-    
-    visibleCards.forEach((card, i) => {
-      if (allVisible || i < 5) {
-        card.classList.remove('clamped');
-      } else {
-        card.classList.add('clamped');
-      }
-    });
-
-    // Hide the button if there are 5 or fewer visible cards
-    const shouldShowBtn = visibleCards.length > 5;
-    viewAllBtn.style.display = shouldShowBtn ? 'inline-block' : 'none';
-  }
-
-  viewAllBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    allVisible = !allVisible;
-
-    viewAllBtn.style.maxWidth = allVisible ? '140px' : '200px';
-    viewAllBtn.textContent = allVisible ? 'Show less ↑' : 'View all projects ↓';
-
-    applyVisibility();
-  });
-
-  // Update applyFilters to also call applyVisibility after filtering
-  const _originalApplyFilters = applyFilters;
-  applyFilters = function() {
-    _originalApplyFilters();
-    // Reset to collapsed view whenever filters change
-    allVisible = false;
-    viewAllBtn.style.maxWidth = '200px';
-    viewAllBtn.textContent = 'View all projects ↓';
-    applyVisibility();
-  };
-
-  // Run on load
-  applyVisibility();
-</script>
-
-<script>
-  const filterProgramming = document.getElementById('filterProgramming');
-  const filterDesign = document.getElementById('filterDesign');
-  const allCards = document.querySelectorAll('.project-card');
-
-  let programmingActive = true;
-  let designActive = true;
-
-  function applyFilters() {
-    allCards.forEach(card => {
-      const specialty = card.dataset.specialty;
-      const showProgramming = programmingActive && (specialty === 'programming' || specialty === 'both');
-      const showDesign = designActive && (specialty === 'design' || specialty === 'both');
-
-      if (showProgramming || showDesign) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-  }
-
-  filterProgramming.addEventListener('click', () => {
-    programmingActive = !programmingActive;
-    filterProgramming.classList.toggle('inactive', !programmingActive);
-    applyFilters();
-  });
-
-  filterDesign.addEventListener('click', () => {
-    designActive = !designActive;
-    filterDesign.classList.toggle('inactive', !designActive);
-    applyFilters();
-  });
-
-  // Run on load so filtering and clamping are both applied before first paint
-  applyFilters();
-</script> -->
 
 </body>
 </html>
